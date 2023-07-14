@@ -1,5 +1,5 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="com.example.dba_mobile">
+    package="com.school.dba_mobile">
    <application
         android:label="dba_mobile"
         android:name="${applicationName}"
