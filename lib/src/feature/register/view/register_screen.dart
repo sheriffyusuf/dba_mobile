@@ -39,18 +39,30 @@ class RegistrationScreen extends GetView<RegistrationController> {
                   title: "Full name",
                   controller: controller.fullNameController,
                   textFieldType: TextFieldType.NAME,
+                  prefixIcon: const Icon(
+                    Icons.person,
+                    color: Color(0xFF7F909F),
+                  ),
                 ),
                 20.height,
                 InputWithTextHead(
                   title: "Email address",
                   controller: controller.emailController,
                   textFieldType: TextFieldType.EMAIL,
+                  prefixIcon: const Icon(
+                    Icons.email_outlined,
+                    color: Color(0xFF7F909F),
+                  ),
                 ),
                 20.height,
                 InputWithTextHead(
                   title: "Address",
                   controller: controller.addressController,
                   textFieldType: TextFieldType.MULTILINE,
+                  prefixIcon: const Icon(
+                    Icons.location_on,
+                    color: Color(0xFF7F909F),
+                  ),
                 ),
                 20.height,
                 Row(
@@ -65,12 +77,20 @@ class RegistrationScreen extends GetView<RegistrationController> {
                   title: "Password",
                   controller: controller.passwordController,
                   textFieldType: TextFieldType.PASSWORD,
+                  prefixIcon: const Icon(
+                    Icons.lock_outline,
+                    color: Color(0xFF7F909F),
+                  ),
                 ),
                 20.height,
                 InputWithTextHead(
                   title: "Confirm Password",
                   controller: controller.confirmPasswordController,
                   textFieldType: TextFieldType.PASSWORD,
+                  prefixIcon: const Icon(
+                    Icons.lock_outline,
+                    color: Color(0xFF7F909F),
+                  ),
                 ),
                 30.height,
               ],
@@ -79,6 +99,7 @@ class RegistrationScreen extends GetView<RegistrationController> {
           AppElevatedButton(
             height: 56,
             text: 'Create Account',
+            color: const Color(0xFF546EF7),
             onPressed: () {
               // print('i must be logged in');
               controller.registerUser(context);
@@ -114,8 +135,8 @@ class RegistrationScreen extends GetView<RegistrationController> {
                 text: ' Login',
                 recognizer: TapGestureRecognizer()
                   ..onTap = () => controller.gotoLogin(),
-                style: TextStyle(
-                  color: AppPalette.primary.primary400,
+                style: const TextStyle(
+                  color: Color(0xFF546EF7),
                   fontSize: 14,
                   fontFamily: 'Poppins',
                   fontWeight: FontWeight.w400,

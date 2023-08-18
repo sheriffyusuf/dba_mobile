@@ -14,11 +14,11 @@ InputDecoration inputDecoration(
     bool addVPadding = false}) {
   return InputDecoration(
     alignLabelWithHint: true,
-    hintStyle:hintStyle?? const TextStyle(color: AppPalette.white),
+    hintStyle: hintStyle ?? const TextStyle(color: AppPalette.white),
     contentPadding: EdgeInsets.symmetric(
         horizontal: 16, vertical: addVPadding ? 12.0 : 0.0),
     filled: true,
-    fillColor: fillColor,
+    fillColor: const Color.fromARGB(255, 245, 243, 243),
 
     prefixIcon: prefixIcon,
     suffixIcon: suffixIcon,
@@ -26,17 +26,17 @@ InputDecoration inputDecoration(
     enabledBorder: OutlineInputBorder(
         borderRadius: BorderRadius.circular(radius),
         borderSide: BorderSide(
-          color: borderColor ?? AppPalette.grey.gray300,
+          color: borderColor ?? AppPalette.grey.gray200,
         )),
     disabledBorder: OutlineInputBorder(
         borderRadius: BorderRadius.circular(radius),
         borderSide: BorderSide(
-          color: borderColor ?? AppPalette.grey.gray300,
+          color: borderColor ?? AppPalette.grey.gray200,
         )),
     focusedBorder: OutlineInputBorder(
         borderRadius: BorderRadius.circular(radius),
         borderSide: BorderSide(
-          color: borderColor ?? AppPalette.grey.gray300,
+          color: borderColor ?? AppPalette.grey.gray200,
         )),
     errorBorder: OutlineInputBorder(
         borderRadius: BorderRadius.circular(radius),

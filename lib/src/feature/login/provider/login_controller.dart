@@ -9,8 +9,6 @@ import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:nb_utils/nb_utils.dart';
 
-
- 
 class LoginController extends GetxController {
   var isInitialised = false.obs;
   var isPlaying = false.obs;
@@ -18,8 +16,7 @@ class LoginController extends GetxController {
   final emailController = TextEditingController();
   final passwordController = TextEditingController();
   final apiRepository = ApiRepository();
-   GlobalKey<FormState> loginFormKey = GlobalKey<FormState>();
-
+  GlobalKey<FormState> loginFormKey = GlobalKey<FormState>();
 
   @override
   void onInit() {
@@ -39,7 +36,7 @@ class LoginController extends GetxController {
   gotoHomeScreen(BuildContext c) {
     FocusScope.of(c).requestFocus(FocusNode());
     HomeBindings().dependencies();
-    appRoute.replaceAll([const HomeRoute()]);
+    appRoute.replaceAll([const DashboardRoute()]);
   }
 
   gotoRegister() {
