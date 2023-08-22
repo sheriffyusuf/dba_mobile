@@ -74,13 +74,18 @@ class LoginScreen extends GetView<LoginController> {
                 30.height,
                 Align(
                   alignment: Alignment.topRight,
-                  child: Text("Forgot password?",
-                      style: GoogleFonts.poppins(
-                        fontWeight: FontWeight.w500,
-                        fontSize: 14,
-                        height: 1.30,
-                        color: const Color(0xFF546EF7),
-                      )),
+                  child: GestureDetector(
+                    onTap: () {
+                      controller.gotoForgotPassword(context);
+                    },
+                    child: Text("Forgot password?",
+                        style: GoogleFonts.poppins(
+                          fontWeight: FontWeight.w500,
+                          fontSize: 14,
+                          height: 1.30,
+                          color: const Color(0xFF546EF7),
+                        )),
+                  ),
                 ),
                 20.height,
               ],

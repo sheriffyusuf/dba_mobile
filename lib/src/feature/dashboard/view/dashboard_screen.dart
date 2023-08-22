@@ -60,7 +60,7 @@ class DashboardScreen extends StatelessWidget {
               BottomNavigationBarItem(
                 icon: Assets.images.search.svg(),
                 activeIcon:
-                    Assets.images.search.svg(color: const Color(0xFF546EF7)),
+                    Assets.images.pharm.svg(color: const Color(0xFF546EF7)),
                 label: 'Pharmacy',
               ),
               BottomNavigationBarItem(

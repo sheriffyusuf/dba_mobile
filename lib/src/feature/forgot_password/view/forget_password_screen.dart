@@ -1,6 +1,7 @@
 import 'package:auto_route/auto_route.dart';
 import 'package:dba_mobile/src/component/app_color.dart';
 import 'package:dba_mobile/src/component/button.dart';
+import 'package:dba_mobile/src/core/router/locator.dart';
 import 'package:dba_mobile/src/feature/forgot_password/provider/forgot_pass_controller.dart';
 import 'package:dba_mobile/src/feature/login/widget/auth_field.dart';
 import 'package:flutter/material.dart';
@@ -32,7 +33,7 @@ class ForgotPasswordScreen extends GetView<ForgetPassController> {
             children: [
               Text('Trouble with Logging In?',
                   style: GoogleFonts.poppins(
-                      fontWeight: FontWeight.w700, fontSize: 30)),
+                      fontWeight: FontWeight.w700, fontSize: 22)),
               //Assets.images.icons.wave.image(),
             ],
           ),
@@ -41,7 +42,7 @@ class ForgotPasswordScreen extends GetView<ForgetPassController> {
               "Enter your email address and we’ll send you a link to get back into your account.",
               style: GoogleFonts.poppins(
                 fontWeight: FontWeight.w500,
-                fontSize: 14,
+                fontSize: 12,
                 height: 1.30,
                 color: const Color(0xFF7F909F),
               )),
@@ -69,19 +70,25 @@ class ForgotPasswordScreen extends GetView<ForgetPassController> {
             text: 'Next',
             color: const Color(0xFF546EF7),
             onPressed: () {
+              controller.forgotPassword(context);
               // print('i must be logged in');
             },
           ),
           24.height,
           Align(
-            alignment: Alignment.topRight,
-            child: Text("Back to Login",
-                style: GoogleFonts.poppins(
-                  fontWeight: FontWeight.w500,
-                  fontSize: 14,
-                  height: 1.30,
-                  color: const Color(0xFF546EF7),
-                )),
+            alignment: Alignment.center,
+            child: GestureDetector(
+              onTap: () {
+                appRoute.pop();
+              },
+              child: Text("Back to Login",
+                  style: GoogleFonts.poppins(
+                    fontWeight: FontWeight.w500,
+                    fontSize: 14,
+                    height: 1.30,
+                    color: const Color(0xFF546EF7),
+                  )),
+            ),
           ),
           20.height,
         ],

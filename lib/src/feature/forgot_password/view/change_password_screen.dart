@@ -8,6 +8,8 @@ import 'package:get/get_state_manager/src/simple/get_view.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:nb_utils/nb_utils.dart' hide ContextExtensions;
 
+GlobalKey<FormState> changePasswordKey = GlobalKey<FormState>();
+
 @RoutePage()
 class ChangePasswordScreen extends GetView<ForgetPassController> {
   const ChangePasswordScreen({super.key});
@@ -19,39 +21,22 @@ class ChangePasswordScreen extends GetView<ForgetPassController> {
       body: ListView(
         padding: const EdgeInsets.symmetric(horizontal: 24, vertical: 70),
         children: [
-          const Align(
-            alignment: Alignment.topLeft,
-            child: Icon(
-              Icons.close,
-              color: AppPalette.white,
-              size: 27,
-            ),
-          ),
           15.height,
-          Row(
-            children: [
-              Text('Trouble with Logging In?',
-                  style: GoogleFonts.poppins(
-                      fontWeight: FontWeight.w700, fontSize: 30)),
-              //Assets.images.icons.wave.image(),
-            ],
-          ),
-          6.height,
-          Text(
-              "Enter your email address and we’ll send you a link to get back into your account.",
-              style: GoogleFonts.poppins(
-                fontWeight: FontWeight.w500,
-                fontSize: 14,
-                height: 1.30,
-                color: const Color(0xFF7F909F),
-              )),
-          40.height,
           Form(
-            key: controller.forgotPasswordKey,
+            key: changePasswordKey,
             child: Column(
               children: [
-                 InputWithTextHead(
-                  title: "Password",
+                Row(
+                  children: [
+                    Text('Change Password',
+                        style: GoogleFonts.poppins(
+                            fontWeight: FontWeight.w700, fontSize: 20)),
+                    //Assets.images.icons.wave.image(),
+                  ],
+                ),
+                30.height,
+                InputWithTextHead(
+                  title: "New Password",
                   controller: controller.passwordController,
                   textFieldType: TextFieldType.PASSWORD,
                   prefixIcon: const Icon(
@@ -69,7 +54,7 @@ class ChangePasswordScreen extends GetView<ForgetPassController> {
                     color: Color(0xFF7F909F),
                   ),
                 ),
-                30.height,
+                50.height,
               ],
             ),
           ),
@@ -78,19 +63,33 @@ class ChangePasswordScreen extends GetView<ForgetPassController> {
             text: 'Next',
             color: const Color(0xFF546EF7),
             onPressed: () {
+              if (controller.confirmPasswordController.text !=
+                  controller.passwordController.text) {
+                snackBar(context,
+                    title: "Unable to Login, please try again",
+                    backgroundColor: AppPalette.red.red400);
+                return;
+              }
+
+              controller.validatePassword(context);
               // print('i must be logged in');
             },
           ),
           24.height,
           Align(
             alignment: Alignment.topRight,
-            child: Text("Back to Login",
-                style: GoogleFonts.poppins(
-                  fontWeight: FontWeight.w500,
-                  fontSize: 14,
-                  height: 1.30,
-                  color: const Color(0xFF546EF7),
-                )),
+            child: GestureDetector(
+              onTap: () {
+                controller.gotoLoginPage();
+              },
+              child: Text("Back to Login",
+                  style: GoogleFonts.poppins(
+                    fontWeight: FontWeight.w500,
+                    fontSize: 14,
+                    height: 1.30,
+                    color: const Color(0xFF546EF7),
+                  )),
+            ),
           ),
           20.height,
         ],

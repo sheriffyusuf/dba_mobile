@@ -2,6 +2,7 @@ import 'package:dba_mobile/src/component/app_color.dart';
 import 'package:dba_mobile/src/component/loader.dart';
 import 'package:dba_mobile/src/core/router/locator.dart';
 import 'package:dba_mobile/src/core/router/router.dart';
+import 'package:dba_mobile/src/feature/forgot_password/provider/forgot_password_binding.dart';
 import 'package:dba_mobile/src/feature/home/provider/hom_binding.dart';
 import 'package:dba_mobile/src/feature/register/provider/register_binding.dart';
 import 'package:dba_mobile/src/network/repository.dart';
@@ -37,6 +38,12 @@ class LoginController extends GetxController {
     FocusScope.of(c).requestFocus(FocusNode());
     HomeBindings().dependencies();
     appRoute.replaceAll([const DashboardRoute()]);
+  }
+
+  gotoForgotPassword(BuildContext c) {
+    // FocusScope.of(c).requestFocus(FocusNode());
+    ForgotPasswordBindings().dependencies();
+    appRoute.push(const ForgotPasswordRoute());
   }
 
   gotoRegister() {
