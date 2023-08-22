@@ -18,6 +18,9 @@ class $AssetsImagesGen {
   AssetGenImage get ambulance =>
       const AssetGenImage('assets/images/ambulance.png');
 
+  /// File path: assets/images/badge.svg
+  SvgGenImage get badge => const SvgGenImage('assets/images/badge.svg');
+
   /// File path: assets/images/banner1.png
   AssetGenImage get banner1 => const AssetGenImage('assets/images/banner1.png');
 
@@ -43,6 +46,14 @@ class $AssetsImagesGen {
 
   /// File path: assets/images/doc_app.png
   AssetGenImage get docApp => const AssetGenImage('assets/images/doc_app.png');
+
+  /// File path: assets/images/doctor_female.png
+  AssetGenImage get doctorFemale =>
+      const AssetGenImage('assets/images/doctor_female.png');
+
+  /// File path: assets/images/doctor_male.png
+  AssetGenImage get doctorMale =>
+      const AssetGenImage('assets/images/doctor_male.png');
 
   /// File path: assets/images/email_sent.svg
   SvgGenImage get emailSent =>
@@ -131,6 +142,7 @@ class $AssetsImagesGen {
   /// List of all assets
   List<dynamic> get values => [
         ambulance,
+        badge,
         banner1,
         covid,
         cross,
@@ -139,6 +151,8 @@ class $AssetsImagesGen {
         diagnotics1,
         discover,
         docApp,
+        doctorFemale,
+        doctorMale,
         emailSent,
         facebook,
         flutterLogo,

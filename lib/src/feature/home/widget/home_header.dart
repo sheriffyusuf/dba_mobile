@@ -13,8 +13,25 @@ class HomeHeaderWidget extends StatelessWidget {
       padding: const EdgeInsets.only(top: 0, left: 0, right: 0),
       child: Row(
         children: [
-          const CircleAvatar(
-            backgroundImage: NetworkImage("https://via.placeholder.com/40x40"),
+          Container(
+            width: 40,
+            height: 40,
+            decoration: const ShapeDecoration(
+              color: Color(0xFFFDBA0B),
+              shape: OvalBorder(),
+            ),
+            child: const Center(
+              child: Text(
+                'A',
+                style: TextStyle(
+                  color: Colors.white,
+                  fontSize: 18,
+                  fontFamily: 'Nunito',
+                  fontWeight: FontWeight.w400,
+                  height: 1.54,
+                ),
+              ),
+            ),
           ),
           10.width,
           Column(

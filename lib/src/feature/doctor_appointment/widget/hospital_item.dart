@@ -5,7 +5,7 @@ import 'package:flutter/material.dart';
 import 'package:nb_utils/nb_utils.dart';
 
 class HospitalItem extends StatelessWidget {
-  const HospitalItem({super.key,required this.model});
+  const HospitalItem({super.key, required this.model});
   final HospitalModel model;
 
   @override
@@ -53,20 +53,25 @@ class HospitalItem extends StatelessWidget {
                     fontWeight: FontWeight.w600,
                   ),
                 ),
-                Row(
-                  children: [
-                    Assets.images.mapPin.svg(),
-                    10.width,
-                     Text(
-                      model.location??"",
-                      style: TextStyle(
-                        color: Color(0xFF6E7682),
-                        fontSize: 13,
-                        fontFamily: 'Nunito',
-                        fontWeight: FontWeight.w400,
+                Padding(
+                  padding: const EdgeInsets.all(1),
+                  child: Row(
+                    children: [
+                      Assets.images.mapPin.svg(),
+                      10.width,
+                      Expanded(
+                        child: Text(
+                          model.location ?? "",
+                          style: const TextStyle(
+                            color: Color(0xFF6E7682),
+                            fontSize: 13,
+                            fontFamily: 'Nunito',
+                            fontWeight: FontWeight.w400,
+                          ),
+                        ),
                       ),
-                    ),
-                  ],
+                    ],
+                  ),
                 ),
                 5.height,
                 Row(

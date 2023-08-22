@@ -1,9 +1,8 @@
 import 'package:auto_route/auto_route.dart';
 import 'package:dba_mobile/gen/assets.gen.dart';
-import 'package:dba_mobile/src/Models/doctor_appoint/hospital_model.dart';
-import 'package:dba_mobile/src/component/button.dart';
 import 'package:dba_mobile/src/feature/component/my_app_bar.dart';
 import 'package:dba_mobile/src/feature/doctor_appointment/provider/doctor_appoint_controller.dart';
+import 'package:dba_mobile/src/feature/doctor_appointment/widget/category_item.dart';
 import 'package:dba_mobile/src/feature/doctor_appointment/widget/hospital_item.dart';
 import 'package:dba_mobile/src/feature/home/provider/home_controller.dart';
 import 'package:dba_mobile/src/feature/home/widget/doctor_item.dart';
@@ -43,7 +42,9 @@ class DoctorAppointScreen extends GetView<DoctorAppointController> {
                 10.height,
                 _doctorAdvert(context),
                 10.height,
-                _headerWidgets("Categories", () {}),
+                _headerWidgets("Categories", () {
+                  controller.gotoAllCategoriesScreen();
+                }),
                 5.height,
                 _categoriesList(),
                 5.height,
@@ -141,37 +142,17 @@ class DoctorAppointScreen extends GetView<DoctorAppointController> {
       scrollDirection: Axis.horizontal,
       child: Row(
         children: [
-          ...[
-            Assets.images.heart.path,
-            Assets.images.kidney.path,
-            Assets.images.dental.path,
-            Assets.images.kidney.path
-          ].map((e) => _categoryModel(e)).toList()
+          ...controller.categoryList
+              .map((e) => GestureDetector(
+                  onTap: () {
+                    {
+                      controller.gotoCategoriesScreen(e.name ?? "");
+                    }
+                  },
+                  child: CategoryItem(imageUrl: e.imageUrl!)))
+              .toList()
         ],
       ),
-    );
-  }
-
-  Widget _categoryModel(String imageUrl) {
-    return Row(
-      children: [
-        Container(
-          width: 85,
-          height: 102,
-          padding: const EdgeInsets.all(4),
-          decoration: ShapeDecoration(
-            color: const Color(0xFF728DFF),
-            image: DecorationImage(
-              image: AssetImage(imageUrl),
-              fit: BoxFit.cover,
-            ),
-            shape: RoundedRectangleBorder(
-              borderRadius: BorderRadius.circular(10),
-            ),
-          ),
-        ),
-        5.width
-      ],
     );
   }
 
@@ -179,7 +160,12 @@ class DoctorAppointScreen extends GetView<DoctorAppointController> {
     return SingleChildScrollView(
       scrollDirection: Axis.horizontal,
       child: Row(
-        children: [...doctorsList.map((e) => DoctorItem(model: e)).toList()],
+        children: [...doctorsList.map((e) => DoctorItem(model: e, bookNowCallback: () {
+                controller.gotoBookNowPage(e);
+              },
+              doctorDetails: () {
+                controller.gotoDoctorDetail(e);
+              })).toList()],
       ),
     );
   }
@@ -191,13 +177,18 @@ class DoctorAppointScreen extends GetView<DoctorAppointController> {
         children: [
           ...hospitalList
               .map((e) => Row(
-                    children: [HospitalItem(model: e,), 10.width],
+                    children: [
+                      GestureDetector(
+                          onTap: () {},
+                          child: HospitalItem(
+                            model: e,
+                          )),
+                      10.width
+                    ],
                   ))
               .toList()
         ],
       ),
     );
   }
-
-
 }

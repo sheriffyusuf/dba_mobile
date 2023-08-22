@@ -65,7 +65,9 @@ class HomeScreen extends GetView<HomeController> {
                         _doctorAppointment(),
                         _otherList(context),
                         10.height,
-                        _headerWidgets("Popular Doctor", () {}),
+                        _headerWidgets("Popular Doctor", () {
+                          controller.gotoPopularPage();
+                        }),
                         5.height,
                         _popularDoctor(context),
                         _headerWidgets("Diagnostics", () {}),
@@ -216,7 +218,16 @@ class HomeScreen extends GetView<HomeController> {
       scrollDirection: Axis.horizontal,
       child: Row(
         children: [
-          ...doctorsList.map((e) => DoctorItem(model: e)).toList()
+          ...doctorsList
+              .map((e) => DoctorItem(
+                  model: e,
+                  bookNowCallback: () {
+                    controller.gotoBookNowPage(e);
+                  },
+                  doctorDetails: () {
+                    controller.gotoDoctorDetail(e);
+                  }))
+              .toList()
         ],
       ),
     );

@@ -45,12 +45,12 @@ class DashboardScreen extends StatelessWidget {
                     Assets.images.home.svg(color: const Color(0xFF546EF7)),
                 label: 'Home',
               ),
-              BottomNavigationBarItem(
+             /*  BottomNavigationBarItem(
                 icon: Assets.images.search.svg(),
                 activeIcon:
                     Assets.images.search.svg(color: const Color(0xFF546EF7)),
                 label: 'Discover',
-              ),
+              ), */
               /*  BottomNavigationBarItem(
                 icon: Assets.images.icons.draft.svg(),
                 activeIcon: Assets.images.icons.draft
@@ -58,7 +58,7 @@ class DashboardScreen extends StatelessWidget {
                 label: 'Draft',
               ), */
               BottomNavigationBarItem(
-                icon: Assets.images.search.svg(),
+                icon: Assets.images.pharm.svg(),
                 activeIcon:
                     Assets.images.pharm.svg(color: const Color(0xFF546EF7)),
                 label: 'Pharmacy',

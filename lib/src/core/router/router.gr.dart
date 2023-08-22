@@ -69,10 +69,46 @@ abstract class _$AppRouter extends RootStackRouter {
         child: const ProfileScreen(),
       );
     },
+    CategoryDetailRoute.name: (routeData) {
+      return AutoRoutePage<dynamic>(
+        routeData: routeData,
+        child: const CategoryDetailScreen(),
+      );
+    },
     DoctorAppointRoute.name: (routeData) {
       return AutoRoutePage<dynamic>(
         routeData: routeData,
         child: const DoctorAppointScreen(),
+      );
+    },
+    CategoryListRoute.name: (routeData) {
+      return AutoRoutePage<dynamic>(
+        routeData: routeData,
+        child: const CategoryListScreen(),
+      );
+    },
+    NearHospitalRoute.name: (routeData) {
+      return AutoRoutePage<dynamic>(
+        routeData: routeData,
+        child: const NearHospitalScreen(),
+      );
+    },
+    DoctorDetailsRoute.name: (routeData) {
+      return AutoRoutePage<dynamic>(
+        routeData: routeData,
+        child: const DoctorDetailsScreen(),
+      );
+    },
+    PopularDoctorRoute.name: (routeData) {
+      return AutoRoutePage<dynamic>(
+        routeData: routeData,
+        child: const PopularDoctorScreen(),
+      );
+    },
+    BookAppointmentRoute.name: (routeData) {
+      return AutoRoutePage<dynamic>(
+        routeData: routeData,
+        child: const BookAppointmentScreen(),
       );
     },
   };
@@ -205,6 +241,20 @@ class ProfileRoute extends PageRouteInfo<void> {
 }
 
 /// generated route for
+/// [CategoryDetailScreen]
+class CategoryDetailRoute extends PageRouteInfo<void> {
+  const CategoryDetailRoute({List<PageRouteInfo>? children})
+      : super(
+          CategoryDetailRoute.name,
+          initialChildren: children,
+        );
+
+  static const String name = 'CategoryDetailRoute';
+
+  static const PageInfo<void> page = PageInfo<void>(name);
+}
+
+/// generated route for
 /// [DoctorAppointScreen]
 class DoctorAppointRoute extends PageRouteInfo<void> {
   const DoctorAppointRoute({List<PageRouteInfo>? children})
@@ -214,6 +264,76 @@ class DoctorAppointRoute extends PageRouteInfo<void> {
         );
 
   static const String name = 'DoctorAppointRoute';
+
+  static const PageInfo<void> page = PageInfo<void>(name);
+}
+
+/// generated route for
+/// [CategoryListScreen]
+class CategoryListRoute extends PageRouteInfo<void> {
+  const CategoryListRoute({List<PageRouteInfo>? children})
+      : super(
+          CategoryListRoute.name,
+          initialChildren: children,
+        );
+
+  static const String name = 'CategoryListRoute';
+
+  static const PageInfo<void> page = PageInfo<void>(name);
+}
+
+/// generated route for
+/// [NearHospitalScreen]
+class NearHospitalRoute extends PageRouteInfo<void> {
+  const NearHospitalRoute({List<PageRouteInfo>? children})
+      : super(
+          NearHospitalRoute.name,
+          initialChildren: children,
+        );
+
+  static const String name = 'NearHospitalRoute';
+
+  static const PageInfo<void> page = PageInfo<void>(name);
+}
+
+/// generated route for
+/// [DoctorDetailsScreen]
+class DoctorDetailsRoute extends PageRouteInfo<void> {
+  const DoctorDetailsRoute({List<PageRouteInfo>? children})
+      : super(
+          DoctorDetailsRoute.name,
+          initialChildren: children,
+        );
+
+  static const String name = 'DoctorDetailsRoute';
+
+  static const PageInfo<void> page = PageInfo<void>(name);
+}
+
+/// generated route for
+/// [PopularDoctorScreen]
+class PopularDoctorRoute extends PageRouteInfo<void> {
+  const PopularDoctorRoute({List<PageRouteInfo>? children})
+      : super(
+          PopularDoctorRoute.name,
+          initialChildren: children,
+        );
+
+  static const String name = 'PopularDoctorRoute';
+
+  static const PageInfo<void> page = PageInfo<void>(name);
+}
+
+/// generated route for
+/// [BookAppointmentScreen]
+class BookAppointmentRoute extends PageRouteInfo<void> {
+  const BookAppointmentRoute({List<PageRouteInfo>? children})
+      : super(
+          BookAppointmentRoute.name,
+          initialChildren: children,
+        );
+
+  static const String name = 'BookAppointmentRoute';
 
   static const PageInfo<void> page = PageInfo<void>(name);
 }
