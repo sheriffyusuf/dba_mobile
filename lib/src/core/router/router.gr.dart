@@ -111,6 +111,24 @@ abstract class _$AppRouter extends RootStackRouter {
         child: const BookAppointmentScreen(),
       );
     },
+    PatientDetailRoute.name: (routeData) {
+      return AutoRoutePage<dynamic>(
+        routeData: routeData,
+        child: const PatientDetailScreen(),
+      );
+    },
+    MyProfileRoute.name: (routeData) {
+      return AutoRoutePage<dynamic>(
+        routeData: routeData,
+        child: const MyProfileScreen(),
+      );
+    },
+    EditProfileRoute.name: (routeData) {
+      return AutoRoutePage<dynamic>(
+        routeData: routeData,
+        child: const EditProfileScreen(),
+      );
+    },
   };
 }
 
@@ -334,6 +352,48 @@ class BookAppointmentRoute extends PageRouteInfo<void> {
         );
 
   static const String name = 'BookAppointmentRoute';
+
+  static const PageInfo<void> page = PageInfo<void>(name);
+}
+
+/// generated route for
+/// [PatientDetailScreen]
+class PatientDetailRoute extends PageRouteInfo<void> {
+  const PatientDetailRoute({List<PageRouteInfo>? children})
+      : super(
+          PatientDetailRoute.name,
+          initialChildren: children,
+        );
+
+  static const String name = 'PatientDetailRoute';
+
+  static const PageInfo<void> page = PageInfo<void>(name);
+}
+
+/// generated route for
+/// [MyProfileScreen]
+class MyProfileRoute extends PageRouteInfo<void> {
+  const MyProfileRoute({List<PageRouteInfo>? children})
+      : super(
+          MyProfileRoute.name,
+          initialChildren: children,
+        );
+
+  static const String name = 'MyProfileRoute';
+
+  static const PageInfo<void> page = PageInfo<void>(name);
+}
+
+/// generated route for
+/// [EditProfileScreen]
+class EditProfileRoute extends PageRouteInfo<void> {
+  const EditProfileRoute({List<PageRouteInfo>? children})
+      : super(
+          EditProfileRoute.name,
+          initialChildren: children,
+        );
+
+  static const String name = 'EditProfileRoute';
 
   static const PageInfo<void> page = PageInfo<void>(name);
 }

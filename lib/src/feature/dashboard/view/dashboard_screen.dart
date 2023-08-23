@@ -15,7 +15,7 @@ class DashboardScreen extends StatelessWidget {
       routes: const [
         HomeRoute(),
         DiscoverRoute(),
-        PharmacyRoute(),
+        // PharmacyRoute(),
         //ScheduleRoute(),
         //  DraftRoute(),
         ProfileRoute()
@@ -45,24 +45,24 @@ class DashboardScreen extends StatelessWidget {
                     Assets.images.home.svg(color: const Color(0xFF546EF7)),
                 label: 'Home',
               ),
-             /*  BottomNavigationBarItem(
+              BottomNavigationBarItem(
                 icon: Assets.images.search.svg(),
                 activeIcon:
                     Assets.images.search.svg(color: const Color(0xFF546EF7)),
                 label: 'Discover',
-              ), */
+              ),
               /*  BottomNavigationBarItem(
                 icon: Assets.images.icons.draft.svg(),
                 activeIcon: Assets.images.icons.draft
                     .svg(color: AppPalette.primary.primary400),
                 label: 'Draft',
               ), */
-              BottomNavigationBarItem(
+              /* BottomNavigationBarItem(
                 icon: Assets.images.pharm.svg(),
                 activeIcon:
                     Assets.images.pharm.svg(color: const Color(0xFF546EF7)),
                 label: 'Pharmacy',
-              ),
+              ), */
               BottomNavigationBarItem(
                 icon: Assets.images.profile.svg(),
                 activeIcon:

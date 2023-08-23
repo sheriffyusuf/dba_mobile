@@ -12,7 +12,10 @@ import 'package:dba_mobile/src/feature/forgot_password/view/change_password_scre
 import 'package:dba_mobile/src/feature/forgot_password/view/forget_password_screen.dart';
 import 'package:dba_mobile/src/feature/home/view/home_screen.dart';
 import 'package:dba_mobile/src/feature/login/view/login_screen.dart';
+import 'package:dba_mobile/src/feature/patient_details/view/patient_details_screen.dart';
 import 'package:dba_mobile/src/feature/pharmacy/view/pharmacy_screen.dart';
+import 'package:dba_mobile/src/feature/profile/view/edit_profile_screen.dart';
+import 'package:dba_mobile/src/feature/profile/view/my_profile_screen.dart';
 import 'package:dba_mobile/src/feature/profile/view/profile_screen.dart';
 import 'package:dba_mobile/src/feature/register/view/register_screen.dart';
 
@@ -22,7 +25,7 @@ part 'router.gr.dart';
 class AppRouter extends _$AppRouter {
   @override
   List<AutoRoute> get routes => [
-        AutoRoute(path: '/login', page: LoginRoute.page),
+        AutoRoute(path: '/', page: LoginRoute.page),
         AutoRoute(path: '/register', page: RegistrationRoute.page),
         AutoRoute(path: '/home', page: HomeRoute.page),
         AutoRoute(path: '/forgot_password', page: ForgotPasswordRoute.page),
@@ -33,16 +36,17 @@ class AppRouter extends _$AppRouter {
         AutoRoute(path: '/near_hospital', page: NearHospitalRoute.page),
         AutoRoute(path: '/doctor_details', page: DoctorDetailsRoute.page),
         AutoRoute(path: '/popular_doctors', page: PopularDoctorRoute.page),
-        AutoRoute(path: '/book_appointment_', page: BookAppointmentRoute.page),
+        AutoRoute(path: '/book_appointment', page: BookAppointmentRoute.page),
+        AutoRoute(path: '/my_profile', page: MyProfileRoute.page),
 
         AutoRoute(
-          path: '/',
+          path: '/dashboard',
           page: DashboardRoute.page,
           children: [
             RedirectRoute(path: '', redirectTo: 'home'),
             AutoRoute(path: 'home', page: HomeRoute.page),
-            // AutoRoute(path: 'discover', page: DiscoverRoute.page),
-            AutoRoute(path: 'pharmacy', page: PharmacyRoute.page),
+            AutoRoute(path: 'discover', page: DiscoverRoute.page),
+            // AutoRoute(path: 'pharmacy', page: PharmacyRoute.page),
             AutoRoute(path: 'profile', page: ProfileRoute.page),
             //AutoRoute(path: 'schedule', page: ScheduleRoute.page),
             //  AutoRoute(path: 'more', page: MoreRoute.page),

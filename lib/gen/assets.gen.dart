@@ -102,6 +102,9 @@ class $AssetsImagesGen {
   /// File path: assets/images/kidney.png
   AssetGenImage get kidney => const AssetGenImage('assets/images/kidney.png');
 
+  /// File path: assets/images/log_out.svg
+  SvgGenImage get logOut => const SvgGenImage('assets/images/log_out.svg');
+
   /// File path: assets/images/lungs.png
   AssetGenImage get lungs => const AssetGenImage('assets/images/lungs.png');
 
@@ -127,8 +130,14 @@ class $AssetsImagesGen {
   AssetGenImage get pharmacy =>
       const AssetGenImage('assets/images/pharmacy.png');
 
+  /// File path: assets/images/prof.svg
+  SvgGenImage get prof => const SvgGenImage('assets/images/prof.svg');
+
   /// File path: assets/images/profile.svg
   SvgGenImage get profile => const SvgGenImage('assets/images/profile.svg');
+
+  /// File path: assets/images/rate_us.svg
+  SvgGenImage get rateUs => const SvgGenImage('assets/images/rate_us.svg');
 
   /// File path: assets/images/search.svg
   SvgGenImage get search => const SvgGenImage('assets/images/search.svg');
@@ -166,6 +175,7 @@ class $AssetsImagesGen {
         hospital6,
         hospitlal1,
         kidney,
+        logOut,
         lungs,
         mapPin,
         notification,
@@ -173,7 +183,9 @@ class $AssetsImagesGen {
         parastamol,
         pharm,
         pharmacy,
+        prof,
         profile,
+        rateUs,
         search,
         star,
         time
