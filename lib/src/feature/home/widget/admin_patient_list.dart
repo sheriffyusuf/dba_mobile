@@ -1,17 +1,18 @@
 import 'package:dba_mobile/gen/assets.gen.dart';
 import 'package:dba_mobile/src/Models/home/doctor_model.dart';
+import 'package:dba_mobile/src/Models/login/register_model.dart';
 import 'package:dba_mobile/src/component/button.dart';
 import 'package:flutter/material.dart';
 import 'package:nb_utils/nb_utils.dart';
 
-class DoctorCategoriesItem extends StatelessWidget {
-  const DoctorCategoriesItem(
+class AdminpatientRecordItem extends StatelessWidget {
+  const AdminpatientRecordItem(
       {super.key,
       required this.model,
       required this.bookNow,
       required this.isFromQueue,
       required this.doctorDetails});
-  final DoctorModel model;
+  final RegisterModel model;
   final bool isFromQueue;
   final VoidCallback bookNow;
   final VoidCallback doctorDetails;
@@ -47,56 +48,6 @@ class DoctorCategoriesItem extends StatelessWidget {
         child: Row(
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
-            GestureDetector(
-              onTap: doctorDetails,
-              child: Column(
-                crossAxisAlignment: CrossAxisAlignment.start,
-                mainAxisAlignment: MainAxisAlignment.start,
-                children: [
-                  Image.asset(model.gender!.toLowerCase() == 'm'
-                      ? Assets.images.doctorMale.path
-                      : Assets.images.doctorFemale.path),
-                  5.height,
-                  Container(
-                    width: 82,
-                    height: 34,
-                    decoration: ShapeDecoration(
-                      color: model.availability == 'yes'
-                          ? Colors.green
-                          : Colors.red,
-                      shape: RoundedRectangleBorder(
-                          borderRadius: BorderRadius.circular(5)),
-                    ),
-                    child: Center(
-                      child: Row(
-                        mainAxisSize: MainAxisSize.min,
-                        children: [
-                          //  Assets.images.star.svg(),
-                          Text.rich(
-                            TextSpan(
-                              children: [
-                                TextSpan(
-                                  text: model.availability == 'yes'
-                                      ? 'Available'
-                                      : 'Unavailable',
-                                  style: const TextStyle(
-                                    color: Colors.white,
-                                    fontSize: 12,
-                                    fontFamily: 'Nunito',
-                                    fontWeight: FontWeight.w400,
-                                  ),
-                                ),
-                              ],
-                            ),
-                          ),
-                        ],
-                      ),
-                    ),
-                  ),
-                ],
-              ),
-            ),
-            10.width,
             Column(
               crossAxisAlignment: CrossAxisAlignment.start,
               mainAxisAlignment: MainAxisAlignment.start,
@@ -120,7 +71,7 @@ class DoctorCategoriesItem extends StatelessWidget {
                         TextSpan(
                           children: [
                             TextSpan(
-                              text: '${model.hospital}\n& Hospital, ',
+                              text: 'Age : ${model.age}',
                               style: const TextStyle(
                                 color: Color(0xFF6E7682),
                                 fontSize: 13,
@@ -128,9 +79,9 @@ class DoctorCategoriesItem extends StatelessWidget {
                                 fontWeight: FontWeight.w400,
                               ),
                             ),
-                            TextSpan(
-                              text: '${model.speciality}',
-                              style: const TextStyle(
+                            const TextSpan(
+                              text: '',
+                              style: TextStyle(
                                 color: Color(0xFF4C5DF4),
                                 fontSize: 13,
                                 fontFamily: 'Nunito',
@@ -145,7 +96,7 @@ class DoctorCategoriesItem extends StatelessWidget {
                         TextSpan(
                           children: [
                             const TextSpan(
-                              text: 'Working at: ',
+                              text: 'Address',
                               style: TextStyle(
                                 color: Color(0xFF0C1037),
                                 fontSize: 13,
@@ -155,7 +106,7 @@ class DoctorCategoriesItem extends StatelessWidget {
                               ),
                             ),
                             TextSpan(
-                              text: model.hospital,
+                              text: model.address,
                               style: const TextStyle(
                                 color: Color(0xFF6E7682),
                                 fontSize: 13,
@@ -170,32 +121,6 @@ class DoctorCategoriesItem extends StatelessWidget {
                     ],
                   ),
                 ),
-                10.height,
-                if (isFromQueue)
-                  Row(
-                    children: [
-                      AppElevatedButton(
-                          height: 40,
-                          width: 120,
-                          text: isFromQueue ? 'Join now' : 'Book Appointment',
-                          color: const Color(0xFF546EF7),
-                          onPressed: bookNow),
-                      10.width,
-                      AppElevatedButton(
-                          height: 40,
-                          width: 120,
-                          text: 'View Queue',
-                          color: const Color(0xFF546EF7),
-                          onPressed: doctorDetails),
-                    ],
-                  ),
-                if (!isFromQueue)
-                  AppElevatedButton(
-                      height: 40,
-                      width: context.width() - 200,
-                      text: isFromQueue ? 'Join now' : 'Book Appointment',
-                      color: const Color(0xFF546EF7),
-                      onPressed: bookNow),
               ],
             ),
           ],

@@ -1,8 +1,6 @@
 import 'package:auto_route/auto_route.dart';
 import 'package:dba_mobile/src/feature/component/my_app_bar.dart';
 import 'package:dba_mobile/src/feature/doctor_appointment/provider/doctor_appoint_controller.dart';
-import 'package:dba_mobile/src/feature/doctor_appointment/widget/category_doctor_item.dart';
-import 'package:dba_mobile/src/feature/home/provider/home_controller.dart';
 import 'package:dba_mobile/src/feature/home/widget/search_widgets.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get_state_manager/src/rx_flutter/rx_obx_widget.dart';
@@ -42,7 +40,7 @@ class PopularDoctorScreen extends GetView<DoctorAppointController> {
                   10.height,
                   _listDiseases(),
                   20.height,
-                  ListView.separated(
+                  /*  ListView.separated(
                     shrinkWrap: true,
                     itemCount: doctorsList.length,
                     itemBuilder: (context, index) {
@@ -58,7 +56,7 @@ class PopularDoctorScreen extends GetView<DoctorAppointController> {
                     separatorBuilder: (context, index) {
                       return const Divider();
                     },
-                  ),
+                  ), */
                 ],
               ),
             )));
@@ -122,4 +120,6 @@ class PopularDoctorScreen extends GetView<DoctorAppointController> {
       ),
     );
   }
+
+
 }

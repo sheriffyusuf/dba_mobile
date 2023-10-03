@@ -4,8 +4,8 @@ import 'package:dba_mobile/src/component/button.dart';
 import 'package:flutter/material.dart';
 import 'package:nb_utils/nb_utils.dart';
 
-class DoctorCategoriesItem extends StatelessWidget {
-  const DoctorCategoriesItem(
+class AdminDoctorCategoriesItem extends StatelessWidget {
+  const AdminDoctorCategoriesItem(
       {super.key,
       required this.model,
       required this.bookNow,
@@ -57,39 +57,38 @@ class DoctorCategoriesItem extends StatelessWidget {
                       ? Assets.images.doctorMale.path
                       : Assets.images.doctorFemale.path),
                   5.height,
-                  Container(
-                    width: 82,
-                    height: 34,
-                    decoration: ShapeDecoration(
-                      color: model.availability == 'yes'
-                          ? Colors.green
-                          : Colors.red,
-                      shape: RoundedRectangleBorder(
-                          borderRadius: BorderRadius.circular(5)),
-                    ),
-                    child: Center(
-                      child: Row(
-                        mainAxisSize: MainAxisSize.min,
-                        children: [
-                          //  Assets.images.star.svg(),
-                          Text.rich(
-                            TextSpan(
-                              children: [
-                                TextSpan(
-                                  text: model.availability == 'yes'
-                                      ? 'Available'
-                                      : 'Unavailable',
-                                  style: const TextStyle(
-                                    color: Colors.white,
-                                    fontSize: 12,
-                                    fontFamily: 'Nunito',
-                                    fontWeight: FontWeight.w400,
+                  GestureDetector(
+                    onTap: doctorDetails,
+                    child: Container(
+                      width: 82,
+                      height: 34,
+                      decoration: ShapeDecoration(
+                        color: Colors.red,
+                        shape: RoundedRectangleBorder(
+                            borderRadius: BorderRadius.circular(5)),
+                      ),
+                      child: const Center(
+                        child: Row(
+                          mainAxisSize: MainAxisSize.min,
+                          children: [
+                            //  Assets.images.star.svg(),
+                            Text.rich(
+                              TextSpan(
+                                children: [
+                                  TextSpan(
+                                    text: 'Delete',
+                                    style: TextStyle(
+                                      color: Colors.white,
+                                      fontSize: 12,
+                                      fontFamily: 'Nunito',
+                                      fontWeight: FontWeight.w400,
+                                    ),
                                   ),
-                                ),
-                              ],
+                                ],
+                              ),
                             ),
-                          ),
-                        ],
+                          ],
+                        ),
                       ),
                     ),
                   ),
@@ -171,31 +170,14 @@ class DoctorCategoriesItem extends StatelessWidget {
                   ),
                 ),
                 10.height,
-                if (isFromQueue)
-                  Row(
-                    children: [
-                      AppElevatedButton(
-                          height: 40,
-                          width: 120,
-                          text: isFromQueue ? 'Join now' : 'Book Appointment',
-                          color: const Color(0xFF546EF7),
-                          onPressed: bookNow),
-                      10.width,
-                      AppElevatedButton(
-                          height: 40,
-                          width: 120,
-                          text: 'View Queue',
-                          color: const Color(0xFF546EF7),
-                          onPressed: doctorDetails),
-                    ],
-                  ),
-                if (!isFromQueue)
-                  AppElevatedButton(
-                      height: 40,
-                      width: context.width() - 200,
-                      text: isFromQueue ? 'Join now' : 'Book Appointment',
-                      color: const Color(0xFF546EF7),
-                      onPressed: bookNow),
+                AppElevatedButton(
+                    height: 40,
+                    width: context.width() - 200,
+                    text: model.availability == 'yes'
+                        ? 'Available'
+                        : 'Unavailable',
+                    color: const Color(0xFF546EF7),
+                    onPressed: bookNow),
               ],
             ),
           ],

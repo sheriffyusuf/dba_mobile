@@ -6,26 +6,28 @@ part of 'doctor_model.dart';
 // JsonSerializableGenerator
 // **************************************************************************
 
-_$_DoctorModel _$$_DoctorModelFromJson(Map<String, dynamic> json) =>
-    _$_DoctorModel(
+_$DoctorModelImpl _$$DoctorModelImplFromJson(Map<String, dynamic> json) =>
+    _$DoctorModelImpl(
       id: json['id'] as String?,
       name: json['name'] as String?,
-      type: json['type'] as String?,
-      hospital: json['hospital'] as String?,
-      rating: json['rating'] as String?,
-      rewiews: json['rewiews'] as String?,
+      speciality: json['speciality'] as String?,
       yearsOfExpe: json['yearsOfExpe'] as String?,
+      availability: json['availability'] as String?,
       imageUrl: json['imageUrl'] as String?,
+      hospital: json['hospital'] as String?,
+      gender: json['gender'] as String?,
+      nubCount: json['nubCount'] as String?,
     );
 
-Map<String, dynamic> _$$_DoctorModelToJson(_$_DoctorModel instance) =>
+Map<String, dynamic> _$$DoctorModelImplToJson(_$DoctorModelImpl instance) =>
     <String, dynamic>{
       'id': instance.id,
       'name': instance.name,
-      'type': instance.type,
-      'hospital': instance.hospital,
-      'rating': instance.rating,
-      'rewiews': instance.rewiews,
+      'speciality': instance.speciality,
       'yearsOfExpe': instance.yearsOfExpe,
+      'availability': instance.availability,
       'imageUrl': instance.imageUrl,
+      'hospital': instance.hospital,
+      'gender': instance.gender,
+      'nubCount': instance.nubCount,
     };

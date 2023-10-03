@@ -91,11 +91,11 @@ class _$DiagnosticModelCopyWithImpl<$Res, $Val extends DiagnosticModel>
 }
 
 /// @nodoc
-abstract class _$$_DiagnosticModelCopyWith<$Res>
+abstract class _$$DiagnosticModelImplCopyWith<$Res>
     implements $DiagnosticModelCopyWith<$Res> {
-  factory _$$_DiagnosticModelCopyWith(
-          _$_DiagnosticModel value, $Res Function(_$_DiagnosticModel) then) =
-      __$$_DiagnosticModelCopyWithImpl<$Res>;
+  factory _$$DiagnosticModelImplCopyWith(_$DiagnosticModelImpl value,
+          $Res Function(_$DiagnosticModelImpl) then) =
+      __$$DiagnosticModelImplCopyWithImpl<$Res>;
   @override
   @useResult
   $Res call(
@@ -107,11 +107,11 @@ abstract class _$$_DiagnosticModelCopyWith<$Res>
 }
 
 /// @nodoc
-class __$$_DiagnosticModelCopyWithImpl<$Res>
-    extends _$DiagnosticModelCopyWithImpl<$Res, _$_DiagnosticModel>
-    implements _$$_DiagnosticModelCopyWith<$Res> {
-  __$$_DiagnosticModelCopyWithImpl(
-      _$_DiagnosticModel _value, $Res Function(_$_DiagnosticModel) _then)
+class __$$DiagnosticModelImplCopyWithImpl<$Res>
+    extends _$DiagnosticModelCopyWithImpl<$Res, _$DiagnosticModelImpl>
+    implements _$$DiagnosticModelImplCopyWith<$Res> {
+  __$$DiagnosticModelImplCopyWithImpl(
+      _$DiagnosticModelImpl _value, $Res Function(_$DiagnosticModelImpl) _then)
       : super(_value, _then);
 
   @pragma('vm:prefer-inline')
@@ -123,7 +123,7 @@ class __$$_DiagnosticModelCopyWithImpl<$Res>
     Object? price = freezed,
     Object? imageUrl = freezed,
   }) {
-    return _then(_$_DiagnosticModel(
+    return _then(_$DiagnosticModelImpl(
       id: freezed == id
           ? _value.id
           : id // ignore: cast_nullable_to_non_nullable
@@ -150,12 +150,12 @@ class __$$_DiagnosticModelCopyWithImpl<$Res>
 
 /// @nodoc
 @JsonSerializable()
-class _$_DiagnosticModel implements _DiagnosticModel {
-  const _$_DiagnosticModel(
+class _$DiagnosticModelImpl implements _DiagnosticModel {
+  const _$DiagnosticModelImpl(
       {this.id, this.name, this.discription, this.price, this.imageUrl});
 
-  factory _$_DiagnosticModel.fromJson(Map<String, dynamic> json) =>
-      _$$_DiagnosticModelFromJson(json);
+  factory _$DiagnosticModelImpl.fromJson(Map<String, dynamic> json) =>
+      _$$DiagnosticModelImplFromJson(json);
 
   @override
   final String? id;
@@ -177,7 +177,7 @@ class _$_DiagnosticModel implements _DiagnosticModel {
   bool operator ==(dynamic other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _$_DiagnosticModel &&
+            other is _$DiagnosticModelImpl &&
             (identical(other.id, id) || other.id == id) &&
             (identical(other.name, name) || other.name == name) &&
             (identical(other.discription, discription) ||
@@ -195,12 +195,13 @@ class _$_DiagnosticModel implements _DiagnosticModel {
   @JsonKey(ignore: true)
   @override
   @pragma('vm:prefer-inline')
-  _$$_DiagnosticModelCopyWith<_$_DiagnosticModel> get copyWith =>
-      __$$_DiagnosticModelCopyWithImpl<_$_DiagnosticModel>(this, _$identity);
+  _$$DiagnosticModelImplCopyWith<_$DiagnosticModelImpl> get copyWith =>
+      __$$DiagnosticModelImplCopyWithImpl<_$DiagnosticModelImpl>(
+          this, _$identity);
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_DiagnosticModelToJson(
+    return _$$DiagnosticModelImplToJson(
       this,
     );
   }
@@ -212,10 +213,10 @@ abstract class _DiagnosticModel implements DiagnosticModel {
       final String? name,
       final String? discription,
       final String? price,
-      final String? imageUrl}) = _$_DiagnosticModel;
+      final String? imageUrl}) = _$DiagnosticModelImpl;
 
   factory _DiagnosticModel.fromJson(Map<String, dynamic> json) =
-      _$_DiagnosticModel.fromJson;
+      _$DiagnosticModelImpl.fromJson;
 
   @override
   String? get id;
@@ -229,6 +230,6 @@ abstract class _DiagnosticModel implements DiagnosticModel {
   String? get imageUrl;
   @override
   @JsonKey(ignore: true)
-  _$$_DiagnosticModelCopyWith<_$_DiagnosticModel> get copyWith =>
+  _$$DiagnosticModelImplCopyWith<_$DiagnosticModelImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }

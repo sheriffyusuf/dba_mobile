@@ -5,7 +5,6 @@ import 'package:dba_mobile/src/component/button.dart';
 import 'package:dba_mobile/src/feature/home/provider/home_controller.dart';
 import 'package:dba_mobile/src/feature/home/widget/doctor_item.dart';
 import 'package:dba_mobile/src/feature/home/widget/home_header.dart';
-import 'package:dba_mobile/src/feature/home/widget/search_widgets.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get_state_manager/src/simple/get_view.dart';
 import 'package:nb_utils/nb_utils.dart';
@@ -33,10 +32,10 @@ class HomeScreen extends GetView<HomeController> {
               padding: const EdgeInsets.symmetric(horizontal: 20, vertical: 0),
               child: ListView(
                 children: [
-                  MySearchWidget(
+                  /*   MySearchWidget(
                     controller: controller.searchController,
                     callBack: (value) {},
-                  ),
+                  ), */
                   Container(
                     decoration: const ShapeDecoration(
                       color: Color(0xFFF8F8FC),
@@ -62,21 +61,12 @@ class HomeScreen extends GetView<HomeController> {
                           ),
                         ),
                         10.height,
-                        _doctorAppointment(),
+                        // _doctorAppointment(),
                         _otherList(context),
                         10.height,
-                        _headerWidgets("Popular Doctor", () {
+                        /*  _headerWidgets("Popular Doctor", () {
                           controller.gotoPopularPage();
-                        }),
-                        5.height,
-                        _popularDoctor(context),
-                        _headerWidgets("Diagnostics", () {}),
-                        5.height,
-                        _diagnosticWidgets(context),
-                        _headerWidgets("Product List", () {}),
-                        5.height,
-                        _productList(),
-                        20.height,
+                        }), */
                       ],
                     ),
                   )
@@ -124,38 +114,44 @@ class HomeScreen extends GetView<HomeController> {
     var height = context.height() / 5;
     return Column(
       children: [
-        20.height,
+        100.height,
         Row(
           children: [
-            _oneCard(width, height, Assets.images.diagnostic.path, () {}),
+            _oneCard(width, height, "Join a Queue", Assets.images.queue.path,
+                () {
+              controller.isToQueue.value = true;
+              controller.gotoJoinQueue();
+            }),
             10.width,
-            _oneCard(width, height, Assets.images.pharmacy.path, () {})
+            _oneCard(width, height, "Emergency", Assets.images.emergency.path,
+                () {
+              controller.emergencyPage();
+            })
           ],
         ),
-        10.height,
-        Row(
-          children: [
-            _oneCard(width, height, Assets.images.ambulance.path, () {}),
-            10.width,
-            _oneCard(width, height, Assets.images.nursingCare.path, () {})
-          ],
-        ),
+        50.height,
+        _oneCard(
+            width, height, "Book\n Appointment", Assets.images.appointment.path,
+            () {
+          controller.isToQueue.value = false;
+          controller.gotoJoinQueue();
+        })
       ],
     );
   }
 
-  Widget _oneCard(
-      double width, double height, String path, void Function()? function) {
+  Widget _oneCard(double width, double height, String title, String path,
+      void Function()? function) {
     return GestureDetector(
       onTap: function,
       child: Container(
         height: height,
         width: width,
         decoration: ShapeDecoration(
-          // color: const Color(0xFF4C5DF4),
+          color: const Color(0xFF4C5DF4),
           image: DecorationImage(
             image: AssetImage(path),
-            fit: BoxFit.fill,
+            fit: BoxFit.cover,
           ),
           shape:
               RoundedRectangleBorder(borderRadius: BorderRadius.circular(10)),
@@ -173,6 +169,21 @@ class HomeScreen extends GetView<HomeController> {
               spreadRadius: 0,
             )
           ],
+        ),
+        child: Container(
+          color: Colors.black38,
+          child: Center(
+            child: Text(
+              title,
+              style: const TextStyle(
+                color: Colors.white,
+                fontSize: 20,
+                fontFamily: 'Nunito',
+                fontWeight: FontWeight.bold,
+                height: 1.62,
+              ),
+            ),
+          ),
         ),
       ),
     );

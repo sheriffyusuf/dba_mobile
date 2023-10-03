@@ -1,5 +1,4 @@
 import 'package:auto_route/auto_route.dart';
-import 'package:dba_mobile/gen/assets.gen.dart';
 import 'package:dba_mobile/src/component/app_color.dart';
 import 'package:dba_mobile/src/component/button.dart';
 import 'package:dba_mobile/src/feature/login/provider/login_controller.dart';
@@ -72,7 +71,7 @@ class LoginScreen extends GetView<LoginController> {
                   textFieldType: TextFieldType.PASSWORD,
                 ),
                 30.height,
-                Align(
+                /*  Align(
                   alignment: Alignment.topRight,
                   child: GestureDetector(
                     onTap: () {
@@ -87,7 +86,7 @@ class LoginScreen extends GetView<LoginController> {
                         )),
                   ),
                 ),
-                20.height,
+                20.height, */
               ],
             ),
           ),
@@ -117,7 +116,7 @@ class LoginScreen extends GetView<LoginController> {
             ),
           ),
           10.height,
-          Align(
+          /*   Align(
             alignment: Alignment.center,
             child: Text("Or Using",
                 style: GoogleFonts.poppins(
@@ -127,10 +126,10 @@ class LoginScreen extends GetView<LoginController> {
                   color: const Color(0xFF7F909F),
                 )),
           ),
-          14.height,
-          _button(Assets.images.facebook.svg(), "Login with Facebook"),
-          14.height,
-          _button(Assets.images.google.svg(), "Login with Google"),
+          14.height, */
+          // _button(Assets.images.facebook.svg(), "Login with Facebook"),
+          // 14.height,
+          // _button(Assets.images.google.svg(), "Login with Google"),
           /*  InkWell(
             onTap: () {},
             child: Column(

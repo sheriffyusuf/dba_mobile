@@ -1,4 +1,3 @@
-import 'package:dba_mobile/gen/assets.gen.dart';
 import 'package:dba_mobile/src/Models/home/doctor_model.dart';
 import 'package:dba_mobile/src/component/button.dart';
 import 'package:flutter/material.dart';
@@ -77,7 +76,7 @@ class DoctorItem extends StatelessWidget {
                             ),
                           ),
                           Text(
-                            model.type ?? '',
+                            model.speciality ?? '',
                             style: const TextStyle(
                               color: Color(0xFF4C5DF4),
                               fontSize: 12,
@@ -86,7 +85,7 @@ class DoctorItem extends StatelessWidget {
                               height: 1.33,
                             ),
                           ),
-                          Text(
+                          /*  Text(
                             model.hospital ?? '',
                             style: const TextStyle(
                               color: Color(0xFF6E7682),
@@ -95,13 +94,13 @@ class DoctorItem extends StatelessWidget {
                               fontWeight: FontWeight.w400,
                               height: 1.33,
                             ),
-                          )
+                          ) */
                         ],
                       ),
                     ],
                   ),
                   5.height,
-                  Row(
+                  /*   Row(
                     children: [
                       Row(
                         children: [
@@ -168,16 +167,15 @@ class DoctorItem extends StatelessWidget {
                       )
                     ],
                   ),
-                  5.height,
+                  5.height, */
                 ],
               ),
             ),
             AppElevatedButton(
-              height: 40,
-              text: 'Book now',
-              color: const Color(0xFF546EF7),
-              onPressed:bookNowCallback
-            ),
+                height: 40,
+                text: 'Book now',
+                color: const Color(0xFF546EF7),
+                onPressed: bookNowCallback),
           ],
         ),
       ),

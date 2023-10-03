@@ -126,10 +126,14 @@ class RegistrationController extends GetxController {
         apiRepository
             .getUserRef(userDetails.user!.uid)
             .set(RegisterModel(
+                    id: '',
                     name: fullNameController.text,
                     gender: dropDownValue.value,
                     address: addressController.text,
                     age: age.value,
+                    dateofbirth: 'kkk',
+                    lastlogin: 'okkk',
+                    createdat:'jjjjjj',
                     email: emailController.text)
                 .toJson())
             .then((value) {

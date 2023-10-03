@@ -10,7 +10,18 @@ import 'package:dba_mobile/src/feature/doctor_appointment/view/near_hospital_scr
 import 'package:dba_mobile/src/feature/doctor_appointment/view/popular_doctor_screen.dart';
 import 'package:dba_mobile/src/feature/forgot_password/view/change_password_screen.dart';
 import 'package:dba_mobile/src/feature/forgot_password/view/forget_password_screen.dart';
+import 'package:dba_mobile/src/feature/home/view/admin_list_doctor_screen.dart';
+import 'package:dba_mobile/src/feature/home/view/admin_patient_record.dart';
+import 'package:dba_mobile/src/feature/home/view/admin_screen.dart';
+import 'package:dba_mobile/src/feature/home/view/book_appointment_screen.dart';
+import 'package:dba_mobile/src/feature/home/view/doctor_list_screen.dart';
+import 'package:dba_mobile/src/feature/home/view/doctors_queue_screen.dart';
+import 'package:dba_mobile/src/feature/home/view/emergency_screen.dart';
+import 'package:dba_mobile/src/feature/home/view/history_screen.dart';
 import 'package:dba_mobile/src/feature/home/view/home_screen.dart';
+import 'package:dba_mobile/src/feature/home/view/join_queue_screen.dart';
+import 'package:dba_mobile/src/feature/home/view/poeple_on_queue_screen.dart';
+import 'package:dba_mobile/src/feature/home/view/upload_doctor_screen.dart';
 import 'package:dba_mobile/src/feature/login/view/login_screen.dart';
 import 'package:dba_mobile/src/feature/patient_details/view/patient_details_screen.dart';
 import 'package:dba_mobile/src/feature/pharmacy/view/pharmacy_screen.dart';
@@ -18,6 +29,10 @@ import 'package:dba_mobile/src/feature/profile/view/edit_profile_screen.dart';
 import 'package:dba_mobile/src/feature/profile/view/my_profile_screen.dart';
 import 'package:dba_mobile/src/feature/profile/view/profile_screen.dart';
 import 'package:dba_mobile/src/feature/register/view/register_screen.dart';
+import 'package:flutter/material.dart';
+
+import '../../feature/home/view/admin_emergency_screen_list.dart';
+import '../../feature/home/view/decision_screen.dart';
 
 part 'router.gr.dart';
 
@@ -25,7 +40,8 @@ part 'router.gr.dart';
 class AppRouter extends _$AppRouter {
   @override
   List<AutoRoute> get routes => [
-        AutoRoute(path: '/', page: LoginRoute.page),
+        AutoRoute(path: '/', page: DecisionRoute.page),
+        AutoRoute(path: '/login', page: LoginRoute.page),
         AutoRoute(path: '/register', page: RegistrationRoute.page),
         AutoRoute(path: '/home', page: HomeRoute.page),
         AutoRoute(path: '/forgot_password', page: ForgotPasswordRoute.page),
@@ -39,14 +55,31 @@ class AppRouter extends _$AppRouter {
         AutoRoute(path: '/book_appointment', page: BookAppointmentRoute.page),
         AutoRoute(path: '/my_profile', page: MyProfileRoute.page),
 
+        AutoRoute(path: '/join_queue', page: JoinQueueRoute.page),
+        AutoRoute(path: '/emergency_room', page: EmergencyRoomRoute.page),
+        AutoRoute(path: '/people on queue', page: PoopleOnQueueRoute.page),
+        AutoRoute(
+            path: '/book_appointment_doctor',
+            page: BookAppointDoctorRoute.page),
+        AutoRoute(path: '/doctors_list', page: DoctorsRoomRoute.page),
+        AutoRoute(path: '/doctor_queue', page: DoctorsQueueRoute.page),
+        AutoRoute(path: '/admin', page: AdminRoute.page),
+        //kk
+        //  AutoRoute(path: '/admin', page: .page),
+        AutoRoute(path: '/admin_emergency', page: AdminEmergencyRoute.page),
+        AutoRoute(path: '/admin_list_doctor', page: AdminListDoctorRoute.page),
+        AutoRoute(path: '/admin_patient_list', page: AdminPatientRoute.page),
+        AutoRoute(path: '/admin_post_doctor', page: PostDoctorRoute.page),
+
         AutoRoute(
           path: '/dashboard',
           page: DashboardRoute.page,
           children: [
             RedirectRoute(path: '', redirectTo: 'home'),
             AutoRoute(path: 'home', page: HomeRoute.page),
-            AutoRoute(path: 'discover', page: DiscoverRoute.page),
-            // AutoRoute(path: 'pharmacy', page: PharmacyRoute.page),
+            //   AutoRoute(path: 'discover', page: DiscoverRoute.page),
+            //
+            AutoRoute(path: 'history', page: HistoryRoute.page),
             AutoRoute(path: 'profile', page: ProfileRoute.page),
             //AutoRoute(path: 'schedule', page: ScheduleRoute.page),
             //  AutoRoute(path: 'more', page: MoreRoute.page),

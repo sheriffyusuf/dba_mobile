@@ -18,6 +18,10 @@ class $AssetsImagesGen {
   AssetGenImage get ambulance =>
       const AssetGenImage('assets/images/ambulance.png');
 
+  /// File path: assets/images/appointment.jpeg
+  AssetGenImage get appointment =>
+      const AssetGenImage('assets/images/appointment.jpeg');
+
   /// File path: assets/images/badge.svg
   SvgGenImage get badge => const SvgGenImage('assets/images/badge.svg');
 
@@ -58,6 +62,10 @@ class $AssetsImagesGen {
   /// File path: assets/images/email_sent.svg
   SvgGenImage get emailSent =>
       const SvgGenImage('assets/images/email_sent.svg');
+
+  /// File path: assets/images/emergency.jpg
+  AssetGenImage get emergency =>
+      const AssetGenImage('assets/images/emergency.jpg');
 
   /// File path: assets/images/facebook.svg
   SvgGenImage get facebook => const SvgGenImage('assets/images/facebook.svg');
@@ -136,6 +144,9 @@ class $AssetsImagesGen {
   /// File path: assets/images/profile.svg
   SvgGenImage get profile => const SvgGenImage('assets/images/profile.svg');
 
+  /// File path: assets/images/queue.png
+  AssetGenImage get queue => const AssetGenImage('assets/images/queue.png');
+
   /// File path: assets/images/rate_us.svg
   SvgGenImage get rateUs => const SvgGenImage('assets/images/rate_us.svg');
 
@@ -151,6 +162,7 @@ class $AssetsImagesGen {
   /// List of all assets
   List<dynamic> get values => [
         ambulance,
+        appointment,
         badge,
         banner1,
         covid,
@@ -163,6 +175,7 @@ class $AssetsImagesGen {
         doctorFemale,
         doctorMale,
         emailSent,
+        emergency,
         facebook,
         flutterLogo,
         google,
@@ -185,6 +198,7 @@ class $AssetsImagesGen {
         pharmacy,
         prof,
         profile,
+        queue,
         rateUs,
         search,
         star,

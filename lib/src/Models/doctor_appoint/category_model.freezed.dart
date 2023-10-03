@@ -74,22 +74,22 @@ class _$CategoryModelCopyWithImpl<$Res, $Val extends CategoryModel>
 }
 
 /// @nodoc
-abstract class _$$_CategoryModelCopyWith<$Res>
+abstract class _$$CategoryModelImplCopyWith<$Res>
     implements $CategoryModelCopyWith<$Res> {
-  factory _$$_CategoryModelCopyWith(
-          _$_CategoryModel value, $Res Function(_$_CategoryModel) then) =
-      __$$_CategoryModelCopyWithImpl<$Res>;
+  factory _$$CategoryModelImplCopyWith(
+          _$CategoryModelImpl value, $Res Function(_$CategoryModelImpl) then) =
+      __$$CategoryModelImplCopyWithImpl<$Res>;
   @override
   @useResult
   $Res call({String? id, String? name, String? imageUrl});
 }
 
 /// @nodoc
-class __$$_CategoryModelCopyWithImpl<$Res>
-    extends _$CategoryModelCopyWithImpl<$Res, _$_CategoryModel>
-    implements _$$_CategoryModelCopyWith<$Res> {
-  __$$_CategoryModelCopyWithImpl(
-      _$_CategoryModel _value, $Res Function(_$_CategoryModel) _then)
+class __$$CategoryModelImplCopyWithImpl<$Res>
+    extends _$CategoryModelCopyWithImpl<$Res, _$CategoryModelImpl>
+    implements _$$CategoryModelImplCopyWith<$Res> {
+  __$$CategoryModelImplCopyWithImpl(
+      _$CategoryModelImpl _value, $Res Function(_$CategoryModelImpl) _then)
       : super(_value, _then);
 
   @pragma('vm:prefer-inline')
@@ -99,7 +99,7 @@ class __$$_CategoryModelCopyWithImpl<$Res>
     Object? name = freezed,
     Object? imageUrl = freezed,
   }) {
-    return _then(_$_CategoryModel(
+    return _then(_$CategoryModelImpl(
       id: freezed == id
           ? _value.id
           : id // ignore: cast_nullable_to_non_nullable
@@ -118,11 +118,11 @@ class __$$_CategoryModelCopyWithImpl<$Res>
 
 /// @nodoc
 @JsonSerializable()
-class _$_CategoryModel implements _CategoryModel {
-  const _$_CategoryModel({this.id, this.name, this.imageUrl});
+class _$CategoryModelImpl implements _CategoryModel {
+  const _$CategoryModelImpl({this.id, this.name, this.imageUrl});
 
-  factory _$_CategoryModel.fromJson(Map<String, dynamic> json) =>
-      _$$_CategoryModelFromJson(json);
+  factory _$CategoryModelImpl.fromJson(Map<String, dynamic> json) =>
+      _$$CategoryModelImplFromJson(json);
 
   @override
   final String? id;
@@ -140,7 +140,7 @@ class _$_CategoryModel implements _CategoryModel {
   bool operator ==(dynamic other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _$_CategoryModel &&
+            other is _$CategoryModelImpl &&
             (identical(other.id, id) || other.id == id) &&
             (identical(other.name, name) || other.name == name) &&
             (identical(other.imageUrl, imageUrl) ||
@@ -154,12 +154,12 @@ class _$_CategoryModel implements _CategoryModel {
   @JsonKey(ignore: true)
   @override
   @pragma('vm:prefer-inline')
-  _$$_CategoryModelCopyWith<_$_CategoryModel> get copyWith =>
-      __$$_CategoryModelCopyWithImpl<_$_CategoryModel>(this, _$identity);
+  _$$CategoryModelImplCopyWith<_$CategoryModelImpl> get copyWith =>
+      __$$CategoryModelImplCopyWithImpl<_$CategoryModelImpl>(this, _$identity);
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_CategoryModelToJson(
+    return _$$CategoryModelImplToJson(
       this,
     );
   }
@@ -169,10 +169,10 @@ abstract class _CategoryModel implements CategoryModel {
   const factory _CategoryModel(
       {final String? id,
       final String? name,
-      final String? imageUrl}) = _$_CategoryModel;
+      final String? imageUrl}) = _$CategoryModelImpl;
 
   factory _CategoryModel.fromJson(Map<String, dynamic> json) =
-      _$_CategoryModel.fromJson;
+      _$CategoryModelImpl.fromJson;
 
   @override
   String? get id;
@@ -182,6 +182,6 @@ abstract class _CategoryModel implements CategoryModel {
   String? get imageUrl;
   @override
   @JsonKey(ignore: true)
-  _$$_CategoryModelCopyWith<_$_CategoryModel> get copyWith =>
+  _$$CategoryModelImplCopyWith<_$CategoryModelImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }

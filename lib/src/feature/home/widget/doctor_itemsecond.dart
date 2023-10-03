@@ -4,8 +4,8 @@ import 'package:dba_mobile/src/component/button.dart';
 import 'package:flutter/material.dart';
 import 'package:nb_utils/nb_utils.dart';
 
-class DoctorCategoriesItem extends StatelessWidget {
-  const DoctorCategoriesItem(
+class DoctorItemSecond extends StatelessWidget {
+  const DoctorItemSecond(
       {super.key,
       required this.model,
       required this.bookNow,
@@ -171,31 +171,23 @@ class DoctorCategoriesItem extends StatelessWidget {
                   ),
                 ),
                 10.height,
-                if (isFromQueue)
-                  Row(
-                    children: [
-                      AppElevatedButton(
-                          height: 40,
-                          width: 120,
-                          text: isFromQueue ? 'Join now' : 'Book Appointment',
-                          color: const Color(0xFF546EF7),
-                          onPressed: bookNow),
-                      10.width,
-                      AppElevatedButton(
-                          height: 40,
-                          width: 120,
-                          text: 'View Queue',
-                          color: const Color(0xFF546EF7),
-                          onPressed: doctorDetails),
-                    ],
-                  ),
-                if (!isFromQueue)
-                  AppElevatedButton(
-                      height: 40,
-                      width: context.width() - 200,
-                      text: isFromQueue ? 'Join now' : 'Book Appointment',
-                      color: const Color(0xFF546EF7),
-                      onPressed: bookNow),
+                Row(
+                  children: [
+                    AppElevatedButton(
+                        height: 40,
+                        width: 120,
+                        text: isFromQueue ? 'Join now' : 'Book Appointment',
+                        color: const Color(0xFF546EF7),
+                        onPressed: bookNow),
+                    10.width,
+                    AppElevatedButton(
+                        height: 40,
+                        width: 120,
+                        text: 'View Queue',
+                        color: const Color(0xFF546EF7),
+                        onPressed: doctorDetails),
+                  ],
+                ),
               ],
             ),
           ],

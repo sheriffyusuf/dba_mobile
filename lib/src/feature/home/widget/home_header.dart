@@ -63,12 +63,12 @@ class HomeHeaderWidget extends StatelessWidget {
               )
             ],
           ),
-          const Spacer(),
+          // const Spacer(),
           /*  const Spacer(),
           Align(
               alignment: Alignment.topRight,
               child: Assets.images.icons.notification.image()), */
-          Container(
+          /*    Container(
               width: 40,
               height: 40,
               decoration: const ShapeDecoration(
@@ -82,7 +82,7 @@ class HomeHeaderWidget extends StatelessWidget {
                 padding: const EdgeInsets.all(6),
                 child: Assets.images.notification.svg(),
               )),
-          5.width
+          5.width */
         ],
       ),
     );

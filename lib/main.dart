@@ -2,6 +2,7 @@ import 'package:dba_mobile/src/core/router/locator.dart';
 import 'package:dba_mobile/src/core/router/router.dart';
 import 'package:dba_mobile/src/feature/discover/provider/discover_controller.dart';
 import 'package:dba_mobile/src/feature/home/provider/hom_binding.dart';
+import 'package:dba_mobile/src/feature/home/provider/home_controller.dart';
 import 'package:dba_mobile/src/feature/profile/provider/profile_controller.dart';
 import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/material.dart';
@@ -37,6 +38,7 @@ void main() async {
   Get.lazyPut<LoginController>(() => LoginController());
   Get.lazyPut<ProfileController>(() => ProfileController());
   Get.lazyPut<DiscoverController>(() => DiscoverController());
+
 
   runApp(const ProviderScope(child: MyApp()));
 }

@@ -98,11 +98,11 @@ class _$HospitalModelCopyWithImpl<$Res, $Val extends HospitalModel>
 }
 
 /// @nodoc
-abstract class _$$_HospitalModelCopyWith<$Res>
+abstract class _$$HospitalModelImplCopyWith<$Res>
     implements $HospitalModelCopyWith<$Res> {
-  factory _$$_HospitalModelCopyWith(
-          _$_HospitalModel value, $Res Function(_$_HospitalModel) then) =
-      __$$_HospitalModelCopyWithImpl<$Res>;
+  factory _$$HospitalModelImplCopyWith(
+          _$HospitalModelImpl value, $Res Function(_$HospitalModelImpl) then) =
+      __$$HospitalModelImplCopyWithImpl<$Res>;
   @override
   @useResult
   $Res call(
@@ -115,11 +115,11 @@ abstract class _$$_HospitalModelCopyWith<$Res>
 }
 
 /// @nodoc
-class __$$_HospitalModelCopyWithImpl<$Res>
-    extends _$HospitalModelCopyWithImpl<$Res, _$_HospitalModel>
-    implements _$$_HospitalModelCopyWith<$Res> {
-  __$$_HospitalModelCopyWithImpl(
-      _$_HospitalModel _value, $Res Function(_$_HospitalModel) _then)
+class __$$HospitalModelImplCopyWithImpl<$Res>
+    extends _$HospitalModelCopyWithImpl<$Res, _$HospitalModelImpl>
+    implements _$$HospitalModelImplCopyWith<$Res> {
+  __$$HospitalModelImplCopyWithImpl(
+      _$HospitalModelImpl _value, $Res Function(_$HospitalModelImpl) _then)
       : super(_value, _then);
 
   @pragma('vm:prefer-inline')
@@ -132,7 +132,7 @@ class __$$_HospitalModelCopyWithImpl<$Res>
     Object? review = freezed,
     Object? imageUrl = freezed,
   }) {
-    return _then(_$_HospitalModel(
+    return _then(_$HospitalModelImpl(
       id: freezed == id
           ? _value.id
           : id // ignore: cast_nullable_to_non_nullable
@@ -163,8 +163,8 @@ class __$$_HospitalModelCopyWithImpl<$Res>
 
 /// @nodoc
 @JsonSerializable()
-class _$_HospitalModel implements _HospitalModel {
-  const _$_HospitalModel(
+class _$HospitalModelImpl implements _HospitalModel {
+  const _$HospitalModelImpl(
       {this.id,
       this.name,
       this.location,
@@ -172,8 +172,8 @@ class _$_HospitalModel implements _HospitalModel {
       this.review,
       this.imageUrl});
 
-  factory _$_HospitalModel.fromJson(Map<String, dynamic> json) =>
-      _$$_HospitalModelFromJson(json);
+  factory _$HospitalModelImpl.fromJson(Map<String, dynamic> json) =>
+      _$$HospitalModelImplFromJson(json);
 
   @override
   final String? id;
@@ -197,7 +197,7 @@ class _$_HospitalModel implements _HospitalModel {
   bool operator ==(dynamic other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _$_HospitalModel &&
+            other is _$HospitalModelImpl &&
             (identical(other.id, id) || other.id == id) &&
             (identical(other.name, name) || other.name == name) &&
             (identical(other.location, location) ||
@@ -216,12 +216,12 @@ class _$_HospitalModel implements _HospitalModel {
   @JsonKey(ignore: true)
   @override
   @pragma('vm:prefer-inline')
-  _$$_HospitalModelCopyWith<_$_HospitalModel> get copyWith =>
-      __$$_HospitalModelCopyWithImpl<_$_HospitalModel>(this, _$identity);
+  _$$HospitalModelImplCopyWith<_$HospitalModelImpl> get copyWith =>
+      __$$HospitalModelImplCopyWithImpl<_$HospitalModelImpl>(this, _$identity);
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_HospitalModelToJson(
+    return _$$HospitalModelImplToJson(
       this,
     );
   }
@@ -234,10 +234,10 @@ abstract class _HospitalModel implements HospitalModel {
       final String? location,
       final String? rating,
       final String? review,
-      final String? imageUrl}) = _$_HospitalModel;
+      final String? imageUrl}) = _$HospitalModelImpl;
 
   factory _HospitalModel.fromJson(Map<String, dynamic> json) =
-      _$_HospitalModel.fromJson;
+      _$HospitalModelImpl.fromJson;
 
   @override
   String? get id;
@@ -253,6 +253,6 @@ abstract class _HospitalModel implements HospitalModel {
   String? get imageUrl;
   @override
   @JsonKey(ignore: true)
-  _$$_HospitalModelCopyWith<_$_HospitalModel> get copyWith =>
+  _$$HospitalModelImplCopyWith<_$HospitalModelImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }

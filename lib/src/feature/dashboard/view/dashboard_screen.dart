@@ -14,10 +14,10 @@ class DashboardScreen extends StatelessWidget {
     return AutoTabsRouter.pageView(
       routes: const [
         HomeRoute(),
-        DiscoverRoute(),
+        // DiscoverRoute(),
         // PharmacyRoute(),
         //ScheduleRoute(),
-        //  DraftRoute(),
+        HistoryRoute(),
         ProfileRoute()
       ],
       builder: (context, child, _) {
@@ -46,10 +46,10 @@ class DashboardScreen extends StatelessWidget {
                 label: 'Home',
               ),
               BottomNavigationBarItem(
-                icon: Assets.images.search.svg(),
+                icon: Assets.images.pharm.svg(),
                 activeIcon:
-                    Assets.images.search.svg(color: const Color(0xFF546EF7)),
-                label: 'Discover',
+                    Assets.images.pharm.svg(color: const Color(0xFF546EF7)),
+                label: 'History',
               ),
               /*  BottomNavigationBarItem(
                 icon: Assets.images.icons.draft.svg(),

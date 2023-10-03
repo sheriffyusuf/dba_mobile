@@ -3,19 +3,20 @@ import 'package:freezed_annotation/freezed_annotation.dart';
 part 'doctor_model.freezed.dart';
 part 'doctor_model.g.dart';
 
-@freezed
+@unfreezed
 class DoctorModel with _$DoctorModel {
-  const factory DoctorModel({
-    String? id,
-    String? name,
-    String? type,
-    String? hospital,
-    String? rating,
-    String? rewiews,
-    String? yearsOfExpe,
-    String? imageUrl,
+  factory DoctorModel({
+    required String? id,
+   required String? name,
+   required String? speciality,
+   required String? yearsOfExpe,
+   required String? availability,
+   required String? imageUrl,
+   required String? hospital,
+   required String? gender,
+   required String? nubCount,
   }) = _DoctorModel;
 
-  factory DoctorModel.fromJson(Map<String, dynamic> json) =>
-      _$DoctorModelFromJson(json);
+  factory DoctorModel.fromJson(Map<String, Object?> json)
+      => _$DoctorModelFromJson(json);
 }

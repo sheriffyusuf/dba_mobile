@@ -91,11 +91,11 @@ class _$ProductModelCopyWithImpl<$Res, $Val extends ProductModel>
 }
 
 /// @nodoc
-abstract class _$$_ProductModelCopyWith<$Res>
+abstract class _$$ProductModelImplCopyWith<$Res>
     implements $ProductModelCopyWith<$Res> {
-  factory _$$_ProductModelCopyWith(
-          _$_ProductModel value, $Res Function(_$_ProductModel) then) =
-      __$$_ProductModelCopyWithImpl<$Res>;
+  factory _$$ProductModelImplCopyWith(
+          _$ProductModelImpl value, $Res Function(_$ProductModelImpl) then) =
+      __$$ProductModelImplCopyWithImpl<$Res>;
   @override
   @useResult
   $Res call(
@@ -107,11 +107,11 @@ abstract class _$$_ProductModelCopyWith<$Res>
 }
 
 /// @nodoc
-class __$$_ProductModelCopyWithImpl<$Res>
-    extends _$ProductModelCopyWithImpl<$Res, _$_ProductModel>
-    implements _$$_ProductModelCopyWith<$Res> {
-  __$$_ProductModelCopyWithImpl(
-      _$_ProductModel _value, $Res Function(_$_ProductModel) _then)
+class __$$ProductModelImplCopyWithImpl<$Res>
+    extends _$ProductModelCopyWithImpl<$Res, _$ProductModelImpl>
+    implements _$$ProductModelImplCopyWith<$Res> {
+  __$$ProductModelImplCopyWithImpl(
+      _$ProductModelImpl _value, $Res Function(_$ProductModelImpl) _then)
       : super(_value, _then);
 
   @pragma('vm:prefer-inline')
@@ -123,7 +123,7 @@ class __$$_ProductModelCopyWithImpl<$Res>
     Object? price = freezed,
     Object? imageUrl = freezed,
   }) {
-    return _then(_$_ProductModel(
+    return _then(_$ProductModelImpl(
       id: freezed == id
           ? _value.id
           : id // ignore: cast_nullable_to_non_nullable
@@ -150,12 +150,12 @@ class __$$_ProductModelCopyWithImpl<$Res>
 
 /// @nodoc
 @JsonSerializable()
-class _$_ProductModel implements _ProductModel {
-  const _$_ProductModel(
+class _$ProductModelImpl implements _ProductModel {
+  const _$ProductModelImpl(
       {this.id, this.name, this.discription, this.price, this.imageUrl});
 
-  factory _$_ProductModel.fromJson(Map<String, dynamic> json) =>
-      _$$_ProductModelFromJson(json);
+  factory _$ProductModelImpl.fromJson(Map<String, dynamic> json) =>
+      _$$ProductModelImplFromJson(json);
 
   @override
   final String? id;
@@ -177,7 +177,7 @@ class _$_ProductModel implements _ProductModel {
   bool operator ==(dynamic other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _$_ProductModel &&
+            other is _$ProductModelImpl &&
             (identical(other.id, id) || other.id == id) &&
             (identical(other.name, name) || other.name == name) &&
             (identical(other.discription, discription) ||
@@ -195,12 +195,12 @@ class _$_ProductModel implements _ProductModel {
   @JsonKey(ignore: true)
   @override
   @pragma('vm:prefer-inline')
-  _$$_ProductModelCopyWith<_$_ProductModel> get copyWith =>
-      __$$_ProductModelCopyWithImpl<_$_ProductModel>(this, _$identity);
+  _$$ProductModelImplCopyWith<_$ProductModelImpl> get copyWith =>
+      __$$ProductModelImplCopyWithImpl<_$ProductModelImpl>(this, _$identity);
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_ProductModelToJson(
+    return _$$ProductModelImplToJson(
       this,
     );
   }
@@ -212,10 +212,10 @@ abstract class _ProductModel implements ProductModel {
       final String? name,
       final String? discription,
       final String? price,
-      final String? imageUrl}) = _$_ProductModel;
+      final String? imageUrl}) = _$ProductModelImpl;
 
   factory _ProductModel.fromJson(Map<String, dynamic> json) =
-      _$_ProductModel.fromJson;
+      _$ProductModelImpl.fromJson;
 
   @override
   String? get id;
@@ -229,6 +229,6 @@ abstract class _ProductModel implements ProductModel {
   String? get imageUrl;
   @override
   @JsonKey(ignore: true)
-  _$$_ProductModelCopyWith<_$_ProductModel> get copyWith =>
+  _$$ProductModelImplCopyWith<_$ProductModelImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }

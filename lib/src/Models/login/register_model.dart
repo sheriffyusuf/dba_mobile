@@ -3,18 +3,18 @@ import 'package:freezed_annotation/freezed_annotation.dart';
 part 'register_model.freezed.dart';
 part 'register_model.g.dart';
 
-@freezed
+@unfreezed
 class RegisterModel with _$RegisterModel {
-  const factory RegisterModel({
-    int? id,
-    String? name,
-    DateTime? dateofbirth,
-    String? age,
-    String? gender,
-    String? address,
-    String? email,
-    DateTime? lastlogin,
-    DateTime? createdat,
+  factory RegisterModel({
+    required String? id,
+    required String? name,
+    required String? dateofbirth,
+    required String? age,
+    required String? gender,
+    required String? address,
+    required String? email,
+    required String? lastlogin,
+    required String? createdat,
   }) = _RegisterModel;
 
   factory RegisterModel.fromJson(Map<String, dynamic> json) =>

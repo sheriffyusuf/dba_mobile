@@ -52,7 +52,16 @@ class DoctorAppointController extends GetxController {
   var isInitialised = false.obs;
   final searchController = TextEditingController();
   String selectedCategories = '';
-  DoctorModel selectedModel = const DoctorModel();
+  DoctorModel selectedModel = DoctorModel(
+      id: '',
+      gender: '',
+      name: '',
+      speciality: '',
+      yearsOfExpe: '',
+      availability: '',
+      imageUrl: '',
+      nubCount: '',
+      hospital: '');
 
   var categoryList = [
     CategoryModel(

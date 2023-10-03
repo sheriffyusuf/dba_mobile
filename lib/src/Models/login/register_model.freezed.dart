@@ -20,15 +20,24 @@ RegisterModel _$RegisterModelFromJson(Map<String, dynamic> json) {
 
 /// @nodoc
 mixin _$RegisterModel {
-  int? get id => throw _privateConstructorUsedError;
+  String? get id => throw _privateConstructorUsedError;
+  set id(String? value) => throw _privateConstructorUsedError;
   String? get name => throw _privateConstructorUsedError;
-  DateTime? get dateofbirth => throw _privateConstructorUsedError;
+  set name(String? value) => throw _privateConstructorUsedError;
+  String? get dateofbirth => throw _privateConstructorUsedError;
+  set dateofbirth(String? value) => throw _privateConstructorUsedError;
   String? get age => throw _privateConstructorUsedError;
+  set age(String? value) => throw _privateConstructorUsedError;
   String? get gender => throw _privateConstructorUsedError;
+  set gender(String? value) => throw _privateConstructorUsedError;
   String? get address => throw _privateConstructorUsedError;
+  set address(String? value) => throw _privateConstructorUsedError;
   String? get email => throw _privateConstructorUsedError;
-  DateTime? get lastlogin => throw _privateConstructorUsedError;
-  DateTime? get createdat => throw _privateConstructorUsedError;
+  set email(String? value) => throw _privateConstructorUsedError;
+  String? get lastlogin => throw _privateConstructorUsedError;
+  set lastlogin(String? value) => throw _privateConstructorUsedError;
+  String? get createdat => throw _privateConstructorUsedError;
+  set createdat(String? value) => throw _privateConstructorUsedError;
 
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
   @JsonKey(ignore: true)
@@ -43,15 +52,15 @@ abstract class $RegisterModelCopyWith<$Res> {
       _$RegisterModelCopyWithImpl<$Res, RegisterModel>;
   @useResult
   $Res call(
-      {int? id,
+      {String? id,
       String? name,
-      DateTime? dateofbirth,
+      String? dateofbirth,
       String? age,
       String? gender,
       String? address,
       String? email,
-      DateTime? lastlogin,
-      DateTime? createdat});
+      String? lastlogin,
+      String? createdat});
 }
 
 /// @nodoc
@@ -81,7 +90,7 @@ class _$RegisterModelCopyWithImpl<$Res, $Val extends RegisterModel>
       id: freezed == id
           ? _value.id
           : id // ignore: cast_nullable_to_non_nullable
-              as int?,
+              as String?,
       name: freezed == name
           ? _value.name
           : name // ignore: cast_nullable_to_non_nullable
@@ -89,7 +98,7 @@ class _$RegisterModelCopyWithImpl<$Res, $Val extends RegisterModel>
       dateofbirth: freezed == dateofbirth
           ? _value.dateofbirth
           : dateofbirth // ignore: cast_nullable_to_non_nullable
-              as DateTime?,
+              as String?,
       age: freezed == age
           ? _value.age
           : age // ignore: cast_nullable_to_non_nullable
@@ -109,41 +118,41 @@ class _$RegisterModelCopyWithImpl<$Res, $Val extends RegisterModel>
       lastlogin: freezed == lastlogin
           ? _value.lastlogin
           : lastlogin // ignore: cast_nullable_to_non_nullable
-              as DateTime?,
+              as String?,
       createdat: freezed == createdat
           ? _value.createdat
           : createdat // ignore: cast_nullable_to_non_nullable
-              as DateTime?,
+              as String?,
     ) as $Val);
   }
 }
 
 /// @nodoc
-abstract class _$$_RegisterModelCopyWith<$Res>
+abstract class _$$RegisterModelImplCopyWith<$Res>
     implements $RegisterModelCopyWith<$Res> {
-  factory _$$_RegisterModelCopyWith(
-          _$_RegisterModel value, $Res Function(_$_RegisterModel) then) =
-      __$$_RegisterModelCopyWithImpl<$Res>;
+  factory _$$RegisterModelImplCopyWith(
+          _$RegisterModelImpl value, $Res Function(_$RegisterModelImpl) then) =
+      __$$RegisterModelImplCopyWithImpl<$Res>;
   @override
   @useResult
   $Res call(
-      {int? id,
+      {String? id,
       String? name,
-      DateTime? dateofbirth,
+      String? dateofbirth,
       String? age,
       String? gender,
       String? address,
       String? email,
-      DateTime? lastlogin,
-      DateTime? createdat});
+      String? lastlogin,
+      String? createdat});
 }
 
 /// @nodoc
-class __$$_RegisterModelCopyWithImpl<$Res>
-    extends _$RegisterModelCopyWithImpl<$Res, _$_RegisterModel>
-    implements _$$_RegisterModelCopyWith<$Res> {
-  __$$_RegisterModelCopyWithImpl(
-      _$_RegisterModel _value, $Res Function(_$_RegisterModel) _then)
+class __$$RegisterModelImplCopyWithImpl<$Res>
+    extends _$RegisterModelCopyWithImpl<$Res, _$RegisterModelImpl>
+    implements _$$RegisterModelImplCopyWith<$Res> {
+  __$$RegisterModelImplCopyWithImpl(
+      _$RegisterModelImpl _value, $Res Function(_$RegisterModelImpl) _then)
       : super(_value, _then);
 
   @pragma('vm:prefer-inline')
@@ -159,11 +168,11 @@ class __$$_RegisterModelCopyWithImpl<$Res>
     Object? lastlogin = freezed,
     Object? createdat = freezed,
   }) {
-    return _then(_$_RegisterModel(
+    return _then(_$RegisterModelImpl(
       id: freezed == id
           ? _value.id
           : id // ignore: cast_nullable_to_non_nullable
-              as int?,
+              as String?,
       name: freezed == name
           ? _value.name
           : name // ignore: cast_nullable_to_non_nullable
@@ -171,7 +180,7 @@ class __$$_RegisterModelCopyWithImpl<$Res>
       dateofbirth: freezed == dateofbirth
           ? _value.dateofbirth
           : dateofbirth // ignore: cast_nullable_to_non_nullable
-              as DateTime?,
+              as String?,
       age: freezed == age
           ? _value.age
           : age // ignore: cast_nullable_to_non_nullable
@@ -191,129 +200,114 @@ class __$$_RegisterModelCopyWithImpl<$Res>
       lastlogin: freezed == lastlogin
           ? _value.lastlogin
           : lastlogin // ignore: cast_nullable_to_non_nullable
-              as DateTime?,
+              as String?,
       createdat: freezed == createdat
           ? _value.createdat
           : createdat // ignore: cast_nullable_to_non_nullable
-              as DateTime?,
+              as String?,
     ));
   }
 }
 
 /// @nodoc
 @JsonSerializable()
-class _$_RegisterModel implements _RegisterModel {
-  const _$_RegisterModel(
-      {this.id,
-      this.name,
-      this.dateofbirth,
-      this.age,
-      this.gender,
-      this.address,
-      this.email,
-      this.lastlogin,
-      this.createdat});
+class _$RegisterModelImpl implements _RegisterModel {
+  _$RegisterModelImpl(
+      {required this.id,
+      required this.name,
+      required this.dateofbirth,
+      required this.age,
+      required this.gender,
+      required this.address,
+      required this.email,
+      required this.lastlogin,
+      required this.createdat});
 
-  factory _$_RegisterModel.fromJson(Map<String, dynamic> json) =>
-      _$$_RegisterModelFromJson(json);
+  factory _$RegisterModelImpl.fromJson(Map<String, dynamic> json) =>
+      _$$RegisterModelImplFromJson(json);
 
   @override
-  final int? id;
+  String? id;
   @override
-  final String? name;
+  String? name;
   @override
-  final DateTime? dateofbirth;
+  String? dateofbirth;
   @override
-  final String? age;
+  String? age;
   @override
-  final String? gender;
+  String? gender;
   @override
-  final String? address;
+  String? address;
   @override
-  final String? email;
+  String? email;
   @override
-  final DateTime? lastlogin;
+  String? lastlogin;
   @override
-  final DateTime? createdat;
+  String? createdat;
 
   @override
   String toString() {
     return 'RegisterModel(id: $id, name: $name, dateofbirth: $dateofbirth, age: $age, gender: $gender, address: $address, email: $email, lastlogin: $lastlogin, createdat: $createdat)';
   }
 
-  @override
-  bool operator ==(dynamic other) {
-    return identical(this, other) ||
-        (other.runtimeType == runtimeType &&
-            other is _$_RegisterModel &&
-            (identical(other.id, id) || other.id == id) &&
-            (identical(other.name, name) || other.name == name) &&
-            (identical(other.dateofbirth, dateofbirth) ||
-                other.dateofbirth == dateofbirth) &&
-            (identical(other.age, age) || other.age == age) &&
-            (identical(other.gender, gender) || other.gender == gender) &&
-            (identical(other.address, address) || other.address == address) &&
-            (identical(other.email, email) || other.email == email) &&
-            (identical(other.lastlogin, lastlogin) ||
-                other.lastlogin == lastlogin) &&
-            (identical(other.createdat, createdat) ||
-                other.createdat == createdat));
-  }
-
-  @JsonKey(ignore: true)
-  @override
-  int get hashCode => Object.hash(runtimeType, id, name, dateofbirth, age,
-      gender, address, email, lastlogin, createdat);
-
   @JsonKey(ignore: true)
   @override
   @pragma('vm:prefer-inline')
-  _$$_RegisterModelCopyWith<_$_RegisterModel> get copyWith =>
-      __$$_RegisterModelCopyWithImpl<_$_RegisterModel>(this, _$identity);
+  _$$RegisterModelImplCopyWith<_$RegisterModelImpl> get copyWith =>
+      __$$RegisterModelImplCopyWithImpl<_$RegisterModelImpl>(this, _$identity);
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_RegisterModelToJson(
+    return _$$RegisterModelImplToJson(
       this,
     );
   }
 }
 
 abstract class _RegisterModel implements RegisterModel {
-  const factory _RegisterModel(
-      {final int? id,
-      final String? name,
-      final DateTime? dateofbirth,
-      final String? age,
-      final String? gender,
-      final String? address,
-      final String? email,
-      final DateTime? lastlogin,
-      final DateTime? createdat}) = _$_RegisterModel;
+  factory _RegisterModel(
+      {required String? id,
+      required String? name,
+      required String? dateofbirth,
+      required String? age,
+      required String? gender,
+      required String? address,
+      required String? email,
+      required String? lastlogin,
+      required String? createdat}) = _$RegisterModelImpl;
 
   factory _RegisterModel.fromJson(Map<String, dynamic> json) =
-      _$_RegisterModel.fromJson;
+      _$RegisterModelImpl.fromJson;
 
   @override
-  int? get id;
+  String? get id;
+  set id(String? value);
   @override
   String? get name;
+  set name(String? value);
   @override
-  DateTime? get dateofbirth;
+  String? get dateofbirth;
+  set dateofbirth(String? value);
   @override
   String? get age;
+  set age(String? value);
   @override
   String? get gender;
+  set gender(String? value);
   @override
   String? get address;
+  set address(String? value);
   @override
   String? get email;
+  set email(String? value);
   @override
-  DateTime? get lastlogin;
+  String? get lastlogin;
+  set lastlogin(String? value);
   @override
-  DateTime? get createdat;
+  String? get createdat;
+  set createdat(String? value);
   @override
   @JsonKey(ignore: true)
-  _$$_RegisterModelCopyWith<_$_RegisterModel> get copyWith =>
+  _$$RegisterModelImplCopyWith<_$RegisterModelImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }

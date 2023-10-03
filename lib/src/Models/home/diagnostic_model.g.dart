@@ -6,8 +6,9 @@ part of 'diagnostic_model.dart';
 // JsonSerializableGenerator
 // **************************************************************************
 
-_$_DiagnosticModel _$$_DiagnosticModelFromJson(Map<String, dynamic> json) =>
-    _$_DiagnosticModel(
+_$DiagnosticModelImpl _$$DiagnosticModelImplFromJson(
+        Map<String, dynamic> json) =>
+    _$DiagnosticModelImpl(
       id: json['id'] as String?,
       name: json['name'] as String?,
       discription: json['discription'] as String?,
@@ -15,7 +16,8 @@ _$_DiagnosticModel _$$_DiagnosticModelFromJson(Map<String, dynamic> json) =>
       imageUrl: json['imageUrl'] as String?,
     );
 
-Map<String, dynamic> _$$_DiagnosticModelToJson(_$_DiagnosticModel instance) =>
+Map<String, dynamic> _$$DiagnosticModelImplToJson(
+        _$DiagnosticModelImpl instance) =>
     <String, dynamic>{
       'id': instance.id,
       'name': instance.name,

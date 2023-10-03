@@ -27,7 +27,7 @@ class CategoryDetailScreen extends GetView<DoctorAppointController> {
               ],
             ),
           )),
-      body: ListView.separated(
+    /*   body: ListView.separated(
         padding: const EdgeInsets.symmetric(horizontal: 20, vertical: 0),
         itemCount: doctorsList.length,
         itemBuilder: (context, index) {
@@ -43,7 +43,7 @@ class CategoryDetailScreen extends GetView<DoctorAppointController> {
         separatorBuilder: (context, index) {
           return const Divider();
         },
-      ), /*  ListView(
+      ),  *//*  ListView(
               padding: const EdgeInsets.symmetric(horizontal: 20, vertical: 0),
               children: [
                ...doctorsList.map((e) => DoctorCategoriesItem(model: e,)).toList()

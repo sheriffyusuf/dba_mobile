@@ -6,8 +6,8 @@ part of 'hospital_model.dart';
 // JsonSerializableGenerator
 // **************************************************************************
 
-_$_HospitalModel _$$_HospitalModelFromJson(Map<String, dynamic> json) =>
-    _$_HospitalModel(
+_$HospitalModelImpl _$$HospitalModelImplFromJson(Map<String, dynamic> json) =>
+    _$HospitalModelImpl(
       id: json['id'] as String?,
       name: json['name'] as String?,
       location: json['location'] as String?,
@@ -16,7 +16,7 @@ _$_HospitalModel _$$_HospitalModelFromJson(Map<String, dynamic> json) =>
       imageUrl: json['imageUrl'] as String?,
     );
 
-Map<String, dynamic> _$$_HospitalModelToJson(_$_HospitalModel instance) =>
+Map<String, dynamic> _$$HospitalModelImplToJson(_$HospitalModelImpl instance) =>
     <String, dynamic>{
       'id': instance.id,
       'name': instance.name,

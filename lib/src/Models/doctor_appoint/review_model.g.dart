@@ -6,8 +6,8 @@ part of 'review_model.dart';
 // JsonSerializableGenerator
 // **************************************************************************
 
-_$_ReviewModel _$$_ReviewModelFromJson(Map<String, dynamic> json) =>
-    _$_ReviewModel(
+_$ReviewModelImpl _$$ReviewModelImplFromJson(Map<String, dynamic> json) =>
+    _$ReviewModelImpl(
       id: json['id'] as String?,
       name: json['name'] as String?,
       imageUrl: json['imageUrl'] as String?,
@@ -16,7 +16,7 @@ _$_ReviewModel _$$_ReviewModelFromJson(Map<String, dynamic> json) =>
       comment: json['comment'] as String?,
     );
 
-Map<String, dynamic> _$$_ReviewModelToJson(_$_ReviewModel instance) =>
+Map<String, dynamic> _$$ReviewModelImplToJson(_$ReviewModelImpl instance) =>
     <String, dynamic>{
       'id': instance.id,
       'name': instance.name,
